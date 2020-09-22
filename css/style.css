@@ -389,6 +389,63 @@ section {
     outline: none;
 }
 /* ------------------ end of signup-page ------------------ */
+
+/* ------------------ admin-page ------------------ */
+.admin-menu {
+    position: fixed;
+    left: 0;
+    top: 10.1vh;
+    width: 200px;
+    height: 79.9%;
+    background: #fff;
+}
+
+.admin-menu p {
+    padding: 20px 0;
+    font-size: 22px;
+    text-align: center;
+    color: #e8491d;
+    user-select: none;
+}
+
+.admin-menu li {
+    border-bottom: 2px solid #f4f4f4;
+}
+.admin-menu ul a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    padding-left: 30px;
+    line-height: 60px;
+    box-sizing: border-box;
+    color: #78472C;
+}
+.admin-holder {
+    position: absolute;
+    left: 18%;
+    width: 70%;
+    height: 60vh;
+}
+.admin-row1, .admin-row2 {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 50px 30px;
+}
+
+.admin {
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+    height: 140px;
+    background: #fff;
+    color: #78472C;
+    border: 3px solid #a7b5be;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+/* ------------------ end of admin-page ------------------ */
 /* ------------------ end of section ------------------ */
 
 /* ------------------ footer ------------------ */

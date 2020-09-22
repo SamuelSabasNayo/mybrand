@@ -65,8 +65,8 @@ section {
 }
 
 .image > img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 }
 
 .text {
@@ -123,7 +123,7 @@ section {
 .about-text p {
     color: #78472C;
     line-height: 2.3em;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .more-infos a{
@@ -152,7 +152,8 @@ section {
 .contact-content {
     position: absolute;
     left: 14%;
-    height: 80vh;
+    height: 70vh;
+    overflow-y: hidden;
 }
 
 .contact-holder {
@@ -172,6 +173,7 @@ section {
 .contact-form {
     display: block;
     width: 550px;
+    height: fit-content;
     padding: 15px;
     border: 3px solid #a7b5be;
     border-radius: 10px;
@@ -180,30 +182,50 @@ section {
 
 
 .contact-form label {
-    margin: 120px 50px;
+    margin: 0px 50px;
     color: #78472C;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .contact-form input, .contact-form textarea {
     width: 80%;
-    margin: 4px 50px;
+    margin: 0px 50px;
     color: #78472C;
     padding: 4px 0;
     font-size: 16px;
     border: 3px solid #a7b5be;
     border-radius: 8px;
+    outline: none;
 }
 
 .contact-form #btn {
-    width: 80%;
-    margin: 8px 50px;
+    width: 81%;
+    margin: 0px 50px 30px 50px;
     color: #e8491d;
-    padding: 8px 150px;
-    font-size: 25px;
+    /* padding: 8px 150px; */
+    font-size: 20px;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
+    outline: none;
+}
+
+.login-signup-message {
+    position: relative;
+}
+.login-signup-message {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #78472C;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.login-signup-message span a {
+    color: #e8491d;
+    text-decoration: none;
 }
 /* ------------------ end of contact-page ------------------ */
 
@@ -243,23 +265,6 @@ section {
     color: #78472C;
 }
 
-.login-message {
-    position: relative;
-}
-.login-message {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #78472C;
-    font-size: 22px;
-    font-weight: 400;
-}
-
-.login-message span a {
-    color: #e8491d;
-    text-decoration: none;
-}
 /* ------------------ end of blogs-page ------------------ */
 
 /* ------------------ login-page ------------------ */
@@ -286,6 +291,7 @@ section {
 .login-form {
     display: block;
     width: 550px;
+    height: fit-content;
     padding: 15px;
     border: 3px solid #a7b5be;
     border-radius: 10px;
@@ -294,14 +300,14 @@ section {
 
 
 .login-form label {
-    margin: 150px 50px;
+    margin: 0 50px;
     color: #78472C;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .login-form input {
     width: 80%;
-    margin: 4px 50px;
+    margin: 0px 50px;
     color: #78472C;
     padding: 4px 0;
     font-size: 16px;
@@ -311,17 +317,78 @@ section {
 }
 
 .login-form #btn {
-    width: 80%;
-    margin: 50px 50px 0px 50px;
+    width: 81%;
     color: #e8491d;
+    font-size: 20px;
+    margin: 30px 50px 30px 50px;
     padding: 8px 150px;
-    font-size: 25px;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
     outline: none;
 }
 /* ------------------ end of login-page ------------------ */
+
+/* ------------------ signup-page ------------------ */
+.signup-content {
+    position: absolute;
+    left: 14%;
+    height: 80vh;
+}
+
+.signup-holder {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.signup-text {
+    width: 300px;
+    color: #78472C;
+    font-size: 40px;
+    margin: 20px 0;
+    padding: 30px 100px 0 0;
+}
+
+.signup-form {
+    display: block;
+    width: 550px;
+    height: fit-content;
+    padding: 15px;
+    border: 3px solid #a7b5be;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.signup-form label {
+    margin: 30px 50px;
+    color: #78472C;
+    font-size: 20px;
+}
+
+.signup-form input {
+    width: 80%;
+    margin: 0px 50px;
+    color: #78472C;
+    padding: 4px 0;
+    font-size: 16px;
+    border: 3px solid #a7b5be;
+    border-radius: 8px;
+    outline: none;
+}
+
+.signup-form #btn {
+    width: 81%;
+    margin: 30px 50px 20px 50px;
+    color: #e8491d;
+    padding: 8px 150px;
+    font-size: 20px;
+    background: #a7b5be;
+    border: 3px solid #a7b5be;
+    border-radius: 8px;
+    outline: none;
+}
+/* ------------------ end of signup-page ------------------ */
 /* ------------------ end of section ------------------ */
 
 /* ------------------ footer ------------------ */

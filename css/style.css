@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Lato', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
 .wrapper {
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
 }
 
 /* ------------------ header ------------------ */
@@ -22,11 +22,22 @@ header {
 }
 
 .nav-menu {
+    width: 35%;
+}
+
+.nav-menu .toggler {
+    display: none;
+}
+
+.nav-menu .menu ul {
     list-style: none;
     display: flex;
-    width: 35%;
+    width: 100%;
     justify-content: space-between;
     font-size: 22px;
+}
+.nav-menu  img, #check {
+    display: none;
 }
 
 .nav-menu a {
@@ -38,6 +49,56 @@ header {
     color: #e8491d;
 }
 /* ------------------ end of header ------------------ */
+
+/* ------------------ media querry for header ------------------ */
+@media(max-width: 1400px) {
+    header {
+        /* display: none; */
+    }
+    .nav-menu {
+    width: 38%;
+    }
+}
+@media(max-width: 1200px) {
+    header {
+        /* display: none; */
+    }
+    .nav-menu {
+        list-style: none;
+        width: 40%;
+        font-size: 20px;
+    }
+}
+@media(max-width: 1000px) {
+    header {
+        /* display: none; */
+        height: fit-content;
+        padding: 0 4rem;
+        flex-direction: column;
+        justify-content: unset;
+        text-align: unset;
+    }
+    .nav-menu .menu ul {
+        /* display: none; */
+        flex-direction: column;
+        text-align: center;
+}
+    .nav-menu {
+        position: relative;
+    }
+    .nav-menu{
+        width: 15%;
+    }
+}
+@media(max-width: 768px) {
+    header {
+        /* display: none; */
+    }
+    .nav-menu {
+        /* width: 42%; */
+    }
+}
+/* ------------------ end of media querry for header ------------------ */
 
 /* ------------------ section ------------------ */
 section {
@@ -65,8 +126,8 @@ section {
 }
 
 .image > img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
 }
 
 .text {
@@ -389,7 +450,146 @@ section {
     outline: none;
 }
 /* ------------------ end of signup-page ------------------ */
+
+/* ------------------ admin-page ------------------ */
+.admin-menu {
+    position: fixed;
+    left: 0;
+    top: 10.1vh;
+    width: 200px;
+    height: 79.9%;
+    background: #fff;
+}
+
+.admin-menu p {
+    padding: 20px 0;
+    font-size: 22px;
+    text-align: center;
+    color: #e8491d;
+    user-select: none;
+}
+
+.admin-menu li {
+    border-bottom: 2px solid #f4f4f4;
+}
+.admin-menu ul a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    padding-left: 30px;
+    line-height: 60px;
+    box-sizing: border-box;
+    color: #78472C;
+}
+.admin-holder {
+    position: absolute;
+    left: 18%;
+    width: 70%;
+    height: 60vh;
+}
+.admin-row1, .admin-row2 {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 50px 30px;
+}
+
+.admin {
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+    height: 140px;
+    background: #fff;
+    color: #78472C;
+    border: 3px solid #a7b5be;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+/* ------------------ end of admin-page ------------------ */
 /* ------------------ end of section ------------------ */
+
+/* ------------------ media querries for section ------------------ */
+@media(max-width: 1200px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-content {
+        left: 10%;
+        width: 80%;
+    }
+
+    .image > img {
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .text {
+        margin-top: 10px;
+        width: 60%;
+    }
+
+    .media {
+        width: 50%;
+    }
+}
+@media(max-width: 1000px) {
+    section {
+        /* display: none; */
+        width: 100vw;
+        background: #f4f4f4;
+    }
+
+    .index-content {
+        position: unset;
+        margin: auto;
+        width: 95%;
+    }
+    
+    .text h3 {
+        font-size: 22px;
+    }
+    
+    .highlight {
+        font-size: 30px;
+    }
+    
+    .social-media {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width: 800px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-content {
+        padding-bottom: 10vh;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image > img {
+        margin: 20px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .text {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .social-media {
+        margin: 10px;
+    }
+}
+/* ------------------ end of media querrie for section ------------------ */
 
 /* ------------------ footer ------------------ */
 footer {

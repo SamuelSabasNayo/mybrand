@@ -6,11 +6,6 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-y: scroll;
 }
-.wrapper {
-    /* width: 100vw;
-    height: 100vh;
-    overflow-y: scroll; */
-}
 
 /* ------------------ header ------------------ */
 header {
@@ -566,6 +561,7 @@ section {
 @media(max-width: 800px) {
     section {
         /* display: none; */
+        height: fit-content;
     }
 
     .index-content {
@@ -593,7 +589,6 @@ section {
     }
     .social-media {
         margin: 10px;
-        background: #f4f4f4;
     }
 }
 /* ------------------ end of media querrie for section ------------------ */

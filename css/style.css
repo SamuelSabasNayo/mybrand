@@ -204,25 +204,22 @@ section {
 
 /* ------------------ contact-page ------------------ */
 .contact-content {
-    position: relative;
-}
-
-.contact-content {
-    position: absolute;
-    left: 14%;
-    width: 75%;
-    height: fit-content;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
 }
 
 .contact-holder {
-    width: 100%;
-    display: flex;
+    margin: auto;
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
 }
 
 .contact-text {
-    width: 10%;
-    margin-top: 0;
+    width: 15%;
     color: #78472C;
     font-size: 40px;
 }
@@ -233,8 +230,9 @@ section {
 }
 
 .contact-form {
-    width: 60%;
     display: block;
+    width: 90%;
+    min-width: 400px;
     height: fit-content;
     padding: 15px;
     border: 3px solid #a7b5be;
@@ -257,29 +255,21 @@ section {
     font-size: 16px;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
+    outline: none; 
 }
 
 .contact-form #btn {
     width: 81%;
-    margin: 0px 50px 30px 50px;
-    color: #e8491d;
-    padding: 8px 150px;
     font-size: 20px;
+    color: #e8491d;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
+    outline: none;margin: 0px 50px 30px 50px;
 }
 
 .login-signup-message {
-    position: relative;
-}
-.login-signup-message {
-    position: absolute;
-    bottom: 9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
     color: #78472C;
     font-size: 22px;
     font-weight: 400;
@@ -293,26 +283,31 @@ section {
 
 /* ------------------ blogs-page ------------------ */
 .blogs-content {
-    position: relative;
+    /* position: relative; */
 }
 
 .blogs-content {
-    position: absolute;
-    left: 10%;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+}
+.blogs-holder {
+    margin: auto;
     width: 80%;
-    height: 80vh;
+    height: fit-content;
 }
 
 
-.blogs-row1, .blogs-row2 {
-    display: flex;
+.blogs-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
     list-style: none;
-    margin: 20px 0;
+    margin: 0px 0;
 }
 
 .blog-img {
-    width: 65%;
+    width: 60%;
 }
 
 .blog-img:hover {
@@ -674,90 +669,62 @@ section {
     
 }
 
-@media(max-width: 1200px) {
-    section {
-        /* display: none; */
-    }
-}
-
 @media(max-width: 1000px) {
+    .wrapper {
+        background: #f4f4f4;
+    }
+
     section {
         /* display: none; */
-        display: block;
-        width: 100%;
-        height: 80vh;
-        display: block;
+        margin: auto;
     }
 
     .contact-content {
-        position: unset;
-        display: block;
-        width: 75%;
         margin: auto;
     }
     
     .contact-holder {
-        display: flex;
+        /* display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 10px; */
     }
 
     .contact-text {
-        width: 19%;
-        margin: 20px 50px 0 0;
-        color: #78472C;
         font-size: 30px;
-    }
-    .contact-form {
-        width: 70%;
-        margin-top: 20px;
-    }
-
-    .login-signup-message {
-        position: unset;
-    }
-    .login-signup-message {
-        text-align: end;
-        font-size: 20px;
     }
 }
 
 @media(max-width: 850px) {
     section {
-        display: none;
-        display: block;
-        width: 100%;
-        height: 120vh;
-        display: block;
+        /* display: none; */
     }
 
-    .contact-holder {
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .contact-form label {
-        margin: 0px 20px;
-        font-size: 16;
-    }
     
-    .contact-form input, .contact-form textarea {
-        margin: 0px 20px;
-    }
-
-    .contact-form #btn {
-    margin: 0px 50px 10px 20px;
-        padding: 8px 20px;
-        font-size: 16px;
-    }
-
-    .login-signup-message {
-        margin-left: 180px;
-        font-size: 16px;
+    @media(max-width: 580px) {
+        section {
+            /* display: none; */
+        }
     }
 }
 /* ------------------ end of media querries for contact ------------------ */
+
+/* ------------------ media querries for blogs ------------------ */
+@media(max-width: 1200px) {
+    .login-signup-message {
+        padding-bottom: 10vh;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        margin: auto;
+    }
+}
+
+@media(max-width: 850px) {
+
+}
+/* ------------------ end of media querries for blogs ------------------ */
 
 /* ------------------ footer ------------------ */
 footer {

@@ -265,7 +265,8 @@ section {
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;margin: 0px 50px 30px 50px;
+    outline: none;
+    margin: 0px 50px 30px 50px;
 }
 
 .login-signup-message {
@@ -326,28 +327,34 @@ section {
 
 /* ------------------ login-page ------------------ */
 .login-content {
-    position: absolute;
-    left: 14%;
-    height: 80vh;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
 }
 
 .login-holder {
-    display: flex;
-    margin: 20px 0;
+    margin: auto;
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
 }
 
 .login-text {
-    width: 300px;
+    width: 15%;
     color: #78472C;
     font-size: 40px;
-    margin: 20px 0;
-    padding: 30px 100px 0 0;
 }
 
+.login-text p {
+    margin: 0;
+    padding: 0;
+}
 .login-form {
     display: block;
-    width: 550px;
+    width: 90%;
+    min-width: 400px;
     height: fit-content;
     padding: 15px;
     border: 3px solid #a7b5be;
@@ -357,14 +364,14 @@ section {
 
 
 .login-form label {
-    margin: 0 50px;
+    margin: 10px 50px;
     color: #78472C;
     font-size: 20px;
 }
 
 .login-form input {
     width: 80%;
-    margin: 0px 50px;
+    margin: 10px 50px;
     color: #78472C;
     padding: 4px 0;
     font-size: 16px;
@@ -375,14 +382,20 @@ section {
 
 .login-form #btn {
     width: 81%;
-    color: #e8491d;
     font-size: 20px;
-    margin: 30px 50px 30px 50px;
-    padding: 8px 150px;
+    color: #e8491d;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
     outline: none;
+    margin: 30px 50px;
+}
+
+.login-admin-user a {
+    text-decoration: none;
+    color: #e8491d;
+    margin: 0 50px;
+    font-size: 20px;
 }
 /* ------------------ end of login-page ------------------ */
 
@@ -682,12 +695,6 @@ section {
     .contact-content {
         margin: auto;
     }
-    
-    .contact-holder {
-        /* display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px; */
-    }
 
     .contact-text {
         font-size: 30px;
@@ -703,6 +710,29 @@ section {
     @media(max-width: 580px) {
         section {
             /* display: none; */
+        }
+        .contact-form {
+            min-width: 300px;
+        }
+
+        .contact-form label {
+            margin: 10px 30px;
+            color: #78472C;
+            font-size: 20px;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            margin: 10px 30px;
+            font-size: 16px;
+        }
+        
+        .contact-form #btn {
+            /* font-size: 20px; */
+            margin: 30px 30px;
+        }
+
+        .login-signup-message {
+            font-size: 18px;
         }
     }
 }
@@ -725,6 +755,67 @@ section {
 
 }
 /* ------------------ end of media querries for blogs ------------------ */
+/* ------------------ media querries for login ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
+@media(max-width: 1000px) {
+    .wrapper {
+        background: #f4f4f4;
+    }
+
+    section {
+        /* display: none; */
+        margin: auto;
+    }
+
+    .login-content {
+        margin: auto;
+    }
+
+    .login-text {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 850px) {
+    section {
+        /* display: none; */
+    }
+
+    
+    @media(max-width: 580px) {
+        section {
+            /* display: none; */
+        }
+
+        .login-form {
+            min-width: 300px;
+        }
+
+        .login-form label {
+            margin: 10px 30px;
+            color: #78472C;
+            font-size: 20px;
+        }
+        
+        .login-form input {
+            margin: 10px 30px;
+            font-size: 16px;
+        }
+        
+        .login-form #btn {
+            font-size: 20px;
+            margin: 30px 30px;
+        }
+
+        .login-admin-user a {
+            margin: 0 30px;
+        }
+    }
+}
+/* ------------------ end of media querries for login ------------------ */
 
 /* ------------------ footer ------------------ */
 footer {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
+    <title>Login Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,43 +17,41 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="current"><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="blogs.html">Blogs</a></li>         
                     <!-- <li><a href="login.html">Account</a></li>          -->
                 </ul>
             </div>
         </header>
         <section>
+            <div class="content-wrapper">
                 <div class="content-title">
-                    <h2><span class="orangered">Contact</span> <span class="dark-orange">Me</span></h2>
+                    <h2><span class="orangered">Login</span> <span class="dark-orange"></span></h2>
                 </div>
-                <div class="contact-content">
-                    <div class="contact-holder">
-                        <div class="contact-text">
-                            <p>Send Your Thoughts To <span class="orangered">Blog Posts</span></p>
+                <div class="login-content">
+                    <div class="login-holder">
+                        <div class="login-text">
+                            <p>Login <br>To <br> Build <br> Your <br> <span class="orangered">Blog Posts</span></p>
                         </div>
-                        <div class="contact-form">
+                        <div class="login-form">
                             <form action="">
                                 <div>
-                                    <label for="name">Name:</label><br>
-                                    <input id="contact-name" type="text" name="name"><br>
+                                    <label for="email">Email</label><br>
+                                    <input id="login-email" type="text" name="email"><br>
                                 </div>
                                 <div>
-                                    <label for="email">Email:</label><br>
-                                    <input id="contact-email" type="text" name="email"><br>
+                                    <label for="name">Password</label><br>
+                                    <input id="login-name" type="password" name="name"><br>
                                 </div>
                                 <div>
-                                    <label for="message">Message:</label><br>
-                                    <textarea id="contact-message" name="message" cols="20" rows="4"></textarea><br><br>
-                                </div>
-                                <div>
-                                    <input id="btn" type="submit" value="Send"></form>
+                                    <input id="btn" type="submit" value="Login"></form>
                                 </div>
                         </div>
+                        </div>
                     </div>
-                    <div class="login-signup-message">
-                        <p>Please <span><a href="login.html">login</a></span> if you have an account</p>
-                    </div>
+                </div>
+                <div class="login-signup-message">
+                    <p>Please <span><a href="signup.html">signup</a></span> if you don't have an account</p>
                 </div>
         </section>
         <footer>

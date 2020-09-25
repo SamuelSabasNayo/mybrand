@@ -19,6 +19,10 @@ header {
     border-bottom: 5px solid #e8491d;
 }
 
+.logo-box img {
+    width: 80%;
+}
+
 .nav-menu {
     width: 35%;
 }
@@ -98,6 +102,10 @@ section {
     background: #f4f4f4;
 }
 
+:focus {
+    outline: none;
+}
+
 /* ------------------ index-page ------------------ */
 
 .index-content {
@@ -162,7 +170,7 @@ section {
     left: 14%;
 }
 .content-title {
-    padding: 30px 0 0 0;
+    padding: 20px 0 0 0;
     text-align: center;
 }
 .orangered {
@@ -255,7 +263,6 @@ section {
     font-size: 16px;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none; 
 }
 
 .contact-form #btn {
@@ -265,7 +272,6 @@ section {
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
     margin: 0px 50px 30px 50px;
 }
 
@@ -274,6 +280,7 @@ section {
     color: #78472C;
     font-size: 22px;
     font-weight: 400;
+    background: #f4f4f4;
 }
 
 .login-signup-message span a {
@@ -319,8 +326,13 @@ section {
     text-align: center;
 }
 
-.blog p {
+.blog p, .blog p a {
     color: #78472C;
+    text-decoration: none;
+}
+
+.blog-paragraph {
+    text-align: justify;
 }
 
 /* ------------------ end of blogs-page ------------------ */
@@ -337,14 +349,15 @@ section {
     width: 80%;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: space-between;
 }
 
 .login-text {
     width: 15%;
     color: #78472C;
-    font-size: 40px;
+    font-size: 30px;
+
 }
 
 .login-text p {
@@ -377,7 +390,6 @@ section {
     font-size: 16px;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
 }
 
 .login-form #btn {
@@ -387,7 +399,6 @@ section {
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
     margin: 30px 50px;
 }
 
@@ -401,28 +412,35 @@ section {
 
 /* ------------------ signup-page ------------------ */
 .signup-content {
-    position: absolute;
-    left: 14%;
-    height: 80vh;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
 }
 
 .signup-holder {
-    display: flex;
-    margin: 20px 0;
+    margin: auto;
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
 }
 
 .signup-text {
-    width: 300px;
+    width: 15%;
     color: #78472C;
-    font-size: 40px;
-    margin: 20px 0;
-    padding: 30px 100px 0 0;
+    font-size: 30px;
+}
+
+.signup-text p {
+    margin: 0;
+    padding: 0;
 }
 
 .signup-form {
     display: block;
-    width: 550px;
+    width: 90%;
+    min-width: 400px;
     height: fit-content;
     padding: 15px;
     border: 3px solid #a7b5be;
@@ -431,7 +449,7 @@ section {
 }
 
 .signup-form label {
-    margin: 30px 50px;
+    margin: 10px 50px;
     color: #78472C;
     font-size: 20px;
 }
@@ -444,76 +462,94 @@ section {
     font-size: 16px;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
 }
 
 .signup-form #btn {
     width: 81%;
-    margin: 30px 50px 20px 50px;
+    margin: 30px 50px;
     color: #e8491d;
-    padding: 8px 150px;
     font-size: 20px;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
 }
 /* ------------------ end of signup-page ------------------ */
 
 /* ------------------ admin-page ------------------ */
+.admin-content {
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+    display: flex;
+}
+
 .admin-menu {
-    position: fixed;
-    left: 0;
-    top: 10.1vh;
-    width: 200px;
-    height: 79.9%;
+    width: 20%;
+    /* height: 70vh; */
     background: #fff;
 }
 
 .admin-menu p {
-    padding: 20px 0;
-    font-size: 22px;
+    padding: 5px 0;
     text-align: center;
+    font-size: 22px;
     color: #e8491d;
     user-select: none;
 }
 
 .admin-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     border-bottom: 2px solid #f4f4f4;
 }
-.admin-menu ul a {
-    list-style: none;
+.admin-menu a {
     text-decoration: none;
-    text-align: center;
     font-size: 19px;
-    padding-left: 30px;
-    line-height: 60px;
+    line-height: 50px;
     box-sizing: border-box;
     color: #78472C;
 }
-.admin-holder {
-    position: absolute;
-    left: 18%;
-    width: 70%;
-    height: 60vh;
+
+.admin-menu .current-menu {
+    background: #f4f4f4;
 }
-.admin-row1, .admin-row2 {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 50px 30px;
+.admin-holder {
+    margin-left: 18%;
+    width: 75%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    text-align: center;
 }
 
-.admin {
-    justify-content: center;
-    text-align: center;
-    width: 25%;
-    height: 140px;
-    background: #fff;
+.admin-box {
+    width: 60%;
+    height: fit-content;
+    margin: 2px;
     color: #78472C;
     border: 3px solid #a7b5be;
     border-radius: 10px;
-    padding-top: 20px;
+    background: #fff;
+}
+
+.admin img {
+    width: 10%;
+}
+
+.admin-holder table {
+    width: fit-content;
+    border: 2px solid #a7b5be;
+}
+
+th, tr, td {
+    padding: 15px;
+    color: #78472C;
+    border: 2px solid #a7b5be;
+}
+.admin2-holder {
+    width: 80%;
+    background: #a7b5be;
 }
 /* ------------------ end of admin-page ------------------ */
 /* ------------------ end of section ------------------ */
@@ -755,6 +791,7 @@ section {
 
 }
 /* ------------------ end of media querries for blogs ------------------ */
+
 /* ------------------ media querries for login ------------------ */
 @media(max-width: 1400px) {
     
@@ -775,7 +812,9 @@ section {
     }
 
     .login-text {
-        font-size: 30px;
+        width: 100%;
+        margin: 10px;
+        font-size: 20px;
     }
 }
 
@@ -788,6 +827,10 @@ section {
     @media(max-width: 580px) {
         section {
             /* display: none; */
+        }
+
+        .login-holder {
+            justify-content: center;
         }
 
         .login-form {
@@ -817,16 +860,161 @@ section {
 }
 /* ------------------ end of media querries for login ------------------ */
 
+/* ------------------ media querries for signup ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
+@media(max-width: 1000px) {
+    .wrapper {
+        background: #f4f4f4;
+    }
+
+    section {
+        /* display: none; */
+        margin: auto;
+    }
+
+    .signup-content {
+        margin: auto;
+    }
+
+    .signup-text {
+        width: 100%;
+        margin: 10px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 850px) {
+    section {
+        /* display: none; */
+    }
+
+    
+    @media(max-width: 580px) {
+        section {
+            /* display: none; */
+        }
+
+        .signup-holder {
+            justify-content: center;
+        }
+
+        .signup-form {
+            min-width: 300px;
+        }
+
+        .signup-form label {
+            margin: 8px 30px;
+            color: #78472C;
+            font-size: 20px;
+        }
+        
+        .signup-form input {
+            margin: 8px 30px;
+            font-size: 16px;
+        }
+        
+        .signup-form #btn {
+            font-size: 20px;
+            margin: 20px 30px;
+        }
+    }
+}
+/* ------------------ end of media querries for signup ------------------ */
+
+/* ------------------ media querries for admin ------------------ */
+@media(max-width: 1400px) {
+    .wrapper {
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-content {
+        width: 100vw;
+        /* background: wheat; */
+    }
+
+    .admin-menu {
+        width: 25%;
+    }
+}
+
+@media(max-width: 890px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 30%;
+    }
+}
+
+@media(max-width: 700px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 40%;
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 50%;
+    }
+}
+
+@media(max-width: 550px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 65%;
+    }
+}
+
+@media(max-width: 535px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 70%;
+    }
+}
+/* ------------------ end of media querries for admin ------------------ */
+
 /* ------------------ footer ------------------ */
+footer {
+    position: relative;
+}
+
 footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 10%;
+    height: 9vh;
     background: #fff;
     color:#78472C;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: orangered solid 3px;
 }
+
 /* ------------------ footer ------------------ */

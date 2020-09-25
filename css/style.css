@@ -198,22 +198,6 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-
-.techno-row1, .techno-row2 {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 20px 0;
-}
-
-.technologies img {
-    width: 30%;
-}
-
-.technologies li {
-    margin-top: 20px;
-    list-style: none;
-}
 /* ------------------ end of about-page ------------------ */
 
 /* ------------------ contact-page ------------------ */
@@ -739,6 +723,20 @@ th, tr, td {
 
     .technologies img {
         width: 20%;
+    }
+
+    .techno-row1, .techno-row2 {
+        width: 80%;
+    }
+
+    .technologies img {
+        width: 40%;
+    }
+}
+
+@media(max-width: 800px) {
+    section {
+        /* display: none; */
     }
 }
 /* ------------------ end of media querries for about ------------------ */

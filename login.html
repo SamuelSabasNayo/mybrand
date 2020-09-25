@@ -24,34 +24,36 @@
             </div>
         </header>
         <section>
-            <div class="content-wrapper">
                 <div class="content-title">
-                    <h2><span class="orangered">Login</span> <span class="dark-orange"></span></h2>
+                    <h2><span class="orangered">User</span> <span class="dark-orange">Login</span></h2>
                 </div>
                 <div class="login-content">
                     <div class="login-holder">
                         <div class="login-text">
-                            <p>Login <br>To <br> Build <br> Your <br> <span class="orangered">Blog Posts</span></p>
+                            <p>Login To Build Your <span class="orangered">Blog Posts</span></p>
                         </div>
                         <div class="login-form">
-                            <form action="">
+                            <form action="blogs-management.html">
                                 <div>
                                     <label for="email">Email</label><br>
-                                    <input id="login-email" type="text" name="email"><br>
+                                    <input id="login-email" type="text" name="email" required><br>
                                 </div>
                                 <div>
                                     <label for="name">Password</label><br>
-                                    <input id="login-name" type="password" name="name"><br>
+                                    <input id="login-name" type="password" name="name" required><br>
                                 </div>
                                 <div>
-                                    <input id="btn" type="submit" value="Login"></form>
+                                    <input id="btn" type="submit" value="Login">
+                                </div>
+                            </form>
+                                <div class="login-admin-user">
+                                    <a href="login-admin.html">Login As Admin</a>
                                 </div>
                         </div>
-                        </div>
                     </div>
-                </div>
-                <div class="login-signup-message">
-                    <p>Please <span><a href="signup.html">signup</a></span> if you don't have an account</p>
+                    <div class="login-signup-message">
+                        <p>Please <span><a href="signup.html">signup</a></span> if you don't have an account</p>
+                    </div>
                 </div>
         </section>
         <footer>

@@ -126,12 +126,11 @@ section {
 }
 
 .image > img {
-    width: 350px;
-    height: 350px;
+    width: 100%;
 }
 
 .text {
-    margin-top: 50px;
+    margin-top: 0px;
     width: 60%;
 }
 
@@ -196,17 +195,8 @@ section {
 .technologies {
     width: 95%;
     margin: 20px 0;
-}
-
-.techno-row1, .techno-row2 {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 20px 0;
-}
-
-.technologies img {
-    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 /* ------------------ end of about-page ------------------ */
 
@@ -572,8 +562,20 @@ th, tr, td {
     }
     
     .text {
-        margin-top: 10px;
+        margin-top: 0px;
         width: 60%;
+    }
+
+    .text h3{
+        letter-spacing: 0.05em;
+        line-height: 2.0em;
+        font-size: 25px;
+    }
+
+    .highlight {
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
     }
 
     .media {
@@ -592,17 +594,15 @@ th, tr, td {
         margin: auto;
         width: 95%;
     }
-    .image > img {
-        width: 250px;
-        height: 250px;
-    }
     
     .text h3 {
         font-size: 22px;
+        text-align: center;
     }
     
     .highlight {
-        font-size: 30px;
+        font-size: 22px;
+        margin-left: 7%;
     }
     
     .social-media {
@@ -631,7 +631,7 @@ th, tr, td {
     }
 
     .text {
-        margin-top: 10px;
+        margin-top: 0px;
         width: 100%;
         align-items: center;
     }
@@ -691,10 +691,38 @@ th, tr, td {
         height: fit-content;
     }
 
+    .about-text {
+        text-align: center;
+    }
+
     .technologies {
-        /* display: block; */
+        width: 100%;
         padding-bottom: 10vh;
         margin: auto;
+    }
+
+    .technologies li {
+        text-align: center;
+    }
+}
+
+@media(max-width: 800px) {
+    section {
+        /* display: none; */
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        /* display: none; */
+    }
+
+    .about-text p {
+        font-size: 20px;
+    }
+
+    .technologies img {
+        width: 20%;
     }
 
     .techno-row1, .techno-row2 {

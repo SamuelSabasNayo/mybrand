@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>Admin Dashboard Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,41 +16,41 @@
             <div class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li class="current"><a href="about.html">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blogs.html">Blogs</a></li>         
-                    <!-- <li><a href="login.html">Account</a></li> -->
+                    <!-- <li><a href="login.html">Account</a></li>          -->
                 </ul>
             </div>
         </header>
         <section>
-            <div class="content-wrapper">
                 <div class="content-title">
-                    <h2><span class="orangered">About</span> <span class="dark-orange">Me</span></h2>
+                    <h2><span class="orangered">Create</span> <span class="dark-orange">Blogs</span></h2>
                 </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            I am a full-stack Software engineer and I am currently in Andela Tecnical Leadership Program in kigali, Rwanda
-                            <span class="flag"><img src="assets/images/rwanda.svg" alt="rwandan_flag"></span><br>
-                            If you have any web development needs or you need <span class="more-infos"><a href="contact.html">more information</a></span>, feel free to contact or get to know me a little better.<br>
-                            The following are the technologies used:
-                        </p>
+                <div class="admin-content">
+                    <div class="admin-menu">
+                        <p>My Brand</p>
+                        <ul>
+                            <li><a href="admin.html">Dashboard</a></li>
+                            <li><a href="admin1.html">Manage Users</a></li>
+                            <li class="current-menu"><a href="#">Create Blog</a></li>
+                            <li><a href="blogs-management.html">Read Blogs</a></li>
+                            <li><a href="blogs-management.html">Update Blogs</a></li>
+                            <li><a href="blogs-management.html">Delete Blogs</a></li>
+                        </ul>
                     </div>
-                    <div class="technologies">
-                        <li><img class="fi" src="assets/images/figma.svg" alt="Figma"></li>
-                        <li><img src="assets/images/html5.svg" alt="HTML5"></li>
-                        <li><img src="assets/images/css3.svg" alt="CSS3"></li>
-                        <li><img src="assets/images/js.svg" alt="JavaScript"></li>
-                        <li><img class="mongo" src="assets/images/mongodb.svg" alt="Mongodb"></li>
-                        <li><img src="assets/images/trello.svg" alt="Trello"></li>
-                        <li><img src="assets/images/git.svg" alt="GitHub"></li>
-                        <li><img src="assets/images/postgresql.svg" alt="postgresql"></li>
-                        <li><img class="postman" src="assets/images/postman.svg" alt="Postman"></li>
-                        <li><img src="assets/images/nodejs.svg" alt="Node.js"></li>
+                    
+                    <div class="admin2-holder">
+                                    <form action="blog2.html">
+                                        <textarea name="" id="" cols="40" rows="20"></textarea>
+                                        <input type="file" name="Upload" id="">
+                                        <input type="submit" value="Create A Blog">
+                                    </form>
                     </div>
                 </div>
-            </div>
+                <div class="login-signup-message">
+                    <p><span><a href="login.html">Logout</a></span> </p>
+                </div>
         </section>
         <footer>
             <div class="footer-row1">

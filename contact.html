@@ -15,52 +15,67 @@
             </div>
             <div class="nav-menu">
                 <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="current"><a href="contact.html">Contact</a></li>
-                                <li><a href="blogs.html">Blogs</a></li>         
-                                <!-- <li><a href="login.html">Account</a></li>          -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="contact.html">Contact</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>         
+                    <!-- <li><a href="login.html">Account</a></li>          -->
                 </ul>
             </div>
         </header>
         <section>
-            <div class="content-wrapper">
                 <div class="content-title">
                     <h2><span class="orangered">Contact</span> <span class="dark-orange">Me</span></h2>
                 </div>
                 <div class="contact-content">
                     <div class="contact-holder">
                         <div class="contact-text">
-                            <p>Send <br>Your <br> Thoughts <br> To <br> <span class="orangered">Blog Posts</span></p>
+                            <p>Send Your Querries About <span class="orangered">Blog Posts</span></p>
                         </div>
                         <div class="contact-form">
-                            <form action="">
-                                <div>
-                                    <label for="name">Name</label><br>
-                                    <input id="contact-name" type="text" name="name"><br>
-                                </div>
-                                <div>
-                                    <label for="email">Email</label><br>
-                                    <input id="contact-email" type="text" name="email"><br>
-                                </div>
-                                <div>
-                                    <label for="message">Message</label><br>
-                                    <textarea id="contact-message" name="message" cols="20" rows="4"></textarea><br><br>
-                                </div>
-                                <div>
-                                    <input id="btn" type="submit" value="Send"></form>
-                                </div>
+                            <form action="blogs.html">
+                                <label for="name">Name:</label>
+                                <input id="contact-name" type="text" name="name" required>
+                                <label for="email">Email:</label>
+                                <input id="contact-email" type="text" name="email" required>
+                                <label for="message">Message:</label>
+                                <textarea id="contact-message" name="message" cols="20" rows="4" required></textarea>
+                                <input id="btn" type="submit" value="Send">
+                            </form>
                         </div>
                     </div>
+                    <div class="login-signup-message">
+                        <p>Please <span><a href="login.html">login</a></span> if you have an account</p>
+                    </div>
                 </div>
-            </div>
-            <div class="login-signup-message">
-                <p>Please <span><a href="login.html">login</a></span> if you have an account</p>
-            </div>
         </section>
         <footer>
+            <div class="footer-row1">
+                <div class="about-us">
+                    <p class="footer-orangered">About Us</p>
+                    <p>Mockup Design</p>
+                    <p>Frontend & Backend Services</p>
+                    <p>Database Management</p>
+                </div>
+                <div class="follow-us">
+                    <p class="footer-orangered">Follow Us</p>
+                    <div class="social-media">
+                        <div><a target="_blank" href="https://www.linkedin.com/in/nshumbushijwenayo-samuel-726170112/"><img class="media" src="assets/images/Linkedin.svg" alt="linkedin"></a></div>
+                        <div><a target="_blank" href="https://github.com/SamuelSabasNayo/"><img class="media" src="assets/images/Github.svg" alt="github"></a></div>
+                        <div><a target="_blank" href="https://twitter.com/samuel_nayo"><img class="media" src="assets/images/Twitter.svg" alt="twitter"></a></div>
+                        <div><a target="_blank" href="https://web.facebook.com/samuelsabas.nshumbushijwenayo.3/"><img class="media" src="assets/images/Facebook.svg" alt="facebook"></a></div>
+                    </div>
+                </div>
+                <div class="contact-us">
+                    <p class="footer-orangered">Contact Us</p>
+                    <p>Email: nshusamuel1@gmail.com</p>
+                    <p>Phone: (+250) 787814449</p>
+                    <p>Kigali, Rwanda</p>
+                    <p>KG 03 RD, Kigali</p>
+                </div>
+            </div>
             <div class="copy-right">
-                <p>Sam Web Design, Copy-right &copy;2020</p>
+                <p>&copy; 2020 | Sam Web Design | All Right Reserved.</p>
             </div>
         </footer>
     </div>

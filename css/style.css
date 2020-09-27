@@ -1,27 +1,31 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    overflow-y: scroll;
+    box-sizing: border-box;
 }
-.wrapper {
-    /* width: 100vw;
-    height: 100vh;
-    overflow-y: scroll; */
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ------------------ header ------------------ */
 header {
-    background: #fff;
-    height: 9.5vh;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0 6rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
+    background: #fff;
     border-bottom: 5px solid #e8491d;
+    z-index: 1;
+}
+
+.logo-box img {
+    width: 80%;
 }
 
 .nav-menu {
@@ -51,6 +55,7 @@ header {
     header {
         /* display: none; */
     }
+    
     .nav-menu {
     width: 38%;
     }
@@ -99,75 +104,173 @@ header {
 /* ------------------ section ------------------ */
 section {
     width: 100vw;
-    height: 80vh;
+    height: auto;
     background: #f4f4f4;
+}
+
+:focus {
+    outline: none;
 }
 
 /* ------------------ index-page ------------------ */
-
 .index-content {
-    position: relative;
+    padding: 50px 0;
+    width: 100%;
+    height: 80vh;
 }
 
-.index-content {
-    position: absolute;
-    left: 14%;
-    top: 22.5%;
+.index-holder {
+    margin: 100px auto;
     width: 75%;
-    background: #f4f4f4;
-}
-
-.content {
     display: flex;
     justify-content: space-between;
 }
 
-.image > img {
-    width: 350px;
-    height: 350px;
+.index-holder  img {
+    width: 300px;
+    height: auto;
 }
 
-.text {
-    margin-top: 50px;
+.index-text {
+    margin-top: 30px;
     width: 60%;
+    height: auto;
 }
 
-.text h3{
+.index-text h3{
     color: #78472C;
     letter-spacing: 0.1em;
     line-height: 2.3em;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 .highlight {
     color: #78472C;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
-}
-
-.social-media {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.social-media img {
-    padding-right: 1.2rem;
-}
-
-.media {
-    width: 50%;
 }
 /* ------------------ end of index-page ------------------ */
 
+/* ------------------ media querries for index ------------------ */
+@media(max-width: 1200px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-text h3{
+        letter-spacing: 0.05em;
+        line-height: 2.0em;
+        font-size: 20px;
+    }
+
+    .highlight {
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .media {
+        width: 50%;
+    }
+}
+@media(max-width: 1100px) {
+    .index-holder {
+        width: 82%;
+    }
+}
+
+@media(max-width: 1000px) {
+    body {
+        background: #f4f4f4;
+    }
+    
+    section {
+        /* display: none; */
+    }
+
+    .index-content {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
+
+    .index-holder {
+        width: 100%;
+        margin: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .index-holder img {
+        width: 250px;
+    }
+    
+    .index-text h3 {
+        width: 100vw;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .highlight {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-holder img {
+        width: 220px;
+    }
+    
+    .index-text h3 {
+        width: 100vw;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .highlight {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 450px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-holder img {
+        width: 200px;
+    }
+    
+    .index-text h3 {
+        width: 100vw;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .highlight {
+        font-size: 20px;
+    }
+}
+@media(max-width: 250px) {
+    section {
+        display: none;
+    }
+}    
+/* ------------------ end of media querries for index ------------------ */
+
 /* ------------------ about-page ------------------ */
 .about-content {
-    position: absolute;
-    left: 14%;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
 }
 .content-title {
-    padding: 30px 0;
+    padding: 20px;
     text-align: center;
 }
 .orangered {
@@ -179,9 +282,11 @@ section {
 }
 
 .about-text p {
+    margin: auto;
     color: #78472C;
     line-height: 2.3em;
-    font-size: 19px;
+    font-size: 20px;
+    width: 80%;
 }
 
 .more-infos a{
@@ -190,49 +295,141 @@ section {
 }
 
 .technologies {
-    width: 95%;
-    margin: 50px 0;
+    width: 70%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.techno-row1, .techno-row2 {
-    display: flex;
-    justify-content: space-between;
+.technologies img {
+    width: 30%;
+}
+
+.technologies li {
+    margin-top: 20px;
     list-style: none;
-    margin: 20px 0;
 }
 /* ------------------ end of about-page ------------------ */
 
+/* ------------------ media querries for about ------------------ */
+@media(max-width: 1400px) {
+
+}
+
+.technologies {
+    width: 75%;
+}
+
+@media(max-width: 1200px) {
+    section {
+        /* display: none; */
+    }
+
+    .content-title {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .technologies {
+        width: 90%;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        /* display: none; */
+        width: fit-content;
+        height: fit-content;
+    }
+    .content-wrapper {
+        margin: 0;
+        display: block;
+    }
+    .content-title h2 {
+        margin: 0;
+    }
+
+    .content-title {
+        padding: 20px 0;
+    }
+
+    .about-content {
+        position: unset;
+    }
+    
+    .about-text {
+        margin: auto;
+        width: 90%;
+        height: fit-content;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .technologies {
+        width: 100%;
+        padding-bottom: 10vh;
+        margin: auto;
+    }
+
+    .technologies li {
+        text-align: center;
+        list-style: none;
+    }
+}
+
+@media(max-width: 800px) {
+    section {
+        /* display: none; */
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        /* display: none; */
+    }
+
+    .about-text p {
+        font-size: 20px;
+    }
+
+    .technologies img {
+        width: 20%;
+    }
+}
+
+@media(max-width: 450px) {
+    .about-text p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 250px) {
+    body {
+        display: none;
+    }
+}
+/* ------------------ end of media querries for about ------------------ */
+
 /* ------------------ contact-page ------------------ */
 .contact-content {
-    position: relative;
-}
-
-.contact-content {
-    position: absolute;
-    left: 14%;
-    height: 70vh;
-    overflow-y: hidden;
-}
-
-.contact-holder {
-    display: flex;
-    margin: 20px 0;
-    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
 }
 
 .contact-text {
-    width: 300px;
     color: #78472C;
-    font-size: 40px;
-    margin: 20px 0;
-    padding: 30px 100px 0 0;
+    font-size: 20px;
+    text-align: center;
 }
 
 .contact-form {
     display: block;
-    width: 550px;
-    height: fit-content;
-    padding: 15px;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px 0;
     border: 3px solid #a7b5be;
     border-radius: 10px;
     background: #fff;
@@ -247,38 +444,31 @@ section {
 
 .contact-form input, .contact-form textarea {
     width: 80%;
-    margin: 0px 50px;
+    margin: 0  0 15px 50px;
     color: #78472C;
     padding: 4px 0;
     font-size: 16px;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
 }
 
 .contact-form #btn {
     width: 81%;
-    margin: 0px 50px 30px 50px;
-    color: #e8491d;
-    /* padding: 8px 150px; */
     font-size: 20px;
+    color: #e8491d;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    outline: none;
+    margin: 20px 50px;
 }
 
 .login-signup-message {
-    position: relative;
-}
-.login-signup-message {
-    position: absolute;
-    bottom: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
     color: #78472C;
     font-size: 22px;
     font-weight: 400;
+    background: #f4f4f4;
 }
 
 .login-signup-message span a {
@@ -287,327 +477,581 @@ section {
 }
 /* ------------------ end of contact-page ------------------ */
 
+/* ------------------ media querries for contact ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
+@media(max-width: 1000px) {
+    section {
+        /* display: none; */
+        /* margin: auto; */
+    }
+
+    .contact-content {
+        margin: auto;
+    }
+
+    .contact-form {
+        width: 50%;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form #btn {
+        margin: 10px 40px;
+    }
+}
+
+@media(max-width: 850px) {
+    section {
+        /* display: none; */
+    }
+
+    .contact-text p {
+        margin: auto;
+        width: 60%;
+    }
+
+    .contact-form {
+        width: 60%;
+    }
+
+}
+
+@media(max-width: 580px) {
+    section {
+        /* display: none; */
+    }
+
+    .contact-form {
+        width: 70%;
+    }
+
+    .login-signup-message {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 400px) {
+    section {
+        /* display: none; */
+    }
+
+    .contact-text p {
+        margin: auto;
+        width: 60%;
+    }
+}
+
+@media(max-width: 420px) {
+    section {
+        display: none;
+    }
+
+    .contact-holder {
+        width: 100%;
+        margin: auto;
+    }
+
+    .contact-form {
+        margin: auto;
+        padding: 5px;
+    }
+
+    .contact-form form {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form #btn {
+        margin: 0;
+    }
+}
+/* ------------------ end of media querries for contact ------------------ */
+
 /* ------------------ blogs-page ------------------ */
 .blogs-content {
-    position: relative;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
 }
-
-.blogs-content {
-    position: absolute;
-    left: 10%;
+.blogs-holder {
+    margin: auto;
     width: 80%;
-    height: 80vh;
-}
-
-
-.blogs-row1, .blogs-row2 {
-    display: flex;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: space-between;
-    list-style: none;
-    margin: 20px 0;
-}
-
-.blog-img {
-    width: 65%;
-}
-
-.blog-img:hover {
-    opacity: 60%;
 }
 
 .blog {
-    text-align: center;
+    width: 90%;
+    height: fit-content;
+    margin: 20px 0;
 }
 
-.blog p {
+.blog-box {
+    width: 360px;
+    height: 220px;
+    background: #f4f4f4;
+}
+
+.blog-box:hover {
+    opacity: 70%;
+}
+.blogs-holder a {
+    width: 68%;
+    text-decoration: none;
     color: #78472C;
 }
 
+.blog-img {
+    width: 97%;
+}
+
+.blog-time {
+    font-size: 13px;
+    text-align: end;
+}
+
+.blog-author {
+    font-size: 13px;
+}
+
+.blog-title {
+    margin: 10px 0 0 0;
+    color: #e8491d;
+}
+
+.blog-text {
+    text-align: justify;
+}
+
+.blog-paragraph {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.blogs-holder .blog-create {
+    margin: auto;
+    width: 60%;
+    height: 34vh;
+    padding: 25px;
+    color: #78472C;
+    font-size: 20px;
+    border: 2px solid #a7b5be;
+}
 /* ------------------ end of blogs-page ------------------ */
 
 /* ------------------ login-page ------------------ */
-.login-content {
-    position: absolute;
-    left: 14%;
-    height: 80vh;
-}
-
-.login-holder {
-    display: flex;
-    margin: 20px 0;
-    justify-content: space-between;
-}
-
-.login-text {
-    width: 300px;
-    color: #78472C;
-    font-size: 40px;
-    margin: 20px 0;
-    padding: 30px 100px 0 0;
-}
-
-.login-form {
-    display: block;
-    width: 550px;
-    height: fit-content;
-    padding: 15px;
-    border: 3px solid #a7b5be;
-    border-radius: 10px;
-    background: #fff;
-}
-
-
-.login-form label {
-    margin: 0 50px;
-    color: #78472C;
-    font-size: 20px;
-}
-
-.login-form input {
-    width: 80%;
-    margin: 0px 50px;
-    color: #78472C;
-    padding: 4px 0;
-    font-size: 16px;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-    outline: none;
-}
-
-.login-form #btn {
-    width: 81%;
+.login-admin-user a {
+    text-decoration: none;
     color: #e8491d;
+    margin: 0 50px;
     font-size: 20px;
-    margin: 30px 50px 30px 50px;
-    padding: 8px 150px;
-    background: #a7b5be;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-    outline: none;
 }
 /* ------------------ end of login-page ------------------ */
 
 /* ------------------ signup-page ------------------ */
-.signup-content {
-    position: absolute;
-    left: 14%;
-    height: 80vh;
-}
 
-.signup-holder {
-    display: flex;
-    margin: 20px 0;
-    justify-content: space-between;
-}
-
-.signup-text {
-    width: 300px;
-    color: #78472C;
-    font-size: 40px;
-    margin: 20px 0;
-    padding: 30px 100px 0 0;
-}
-
-.signup-form {
-    display: block;
-    width: 550px;
-    height: fit-content;
-    padding: 15px;
-    border: 3px solid #a7b5be;
-    border-radius: 10px;
-    background: #fff;
-}
-
-.signup-form label {
-    margin: 30px 50px;
-    color: #78472C;
-    font-size: 20px;
-}
-
-.signup-form input {
-    width: 80%;
-    margin: 0px 50px;
-    color: #78472C;
-    padding: 4px 0;
-    font-size: 16px;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-    outline: none;
-}
-
-.signup-form #btn {
-    width: 81%;
-    margin: 30px 50px 20px 50px;
-    color: #e8491d;
-    padding: 8px 150px;
-    font-size: 20px;
-    background: #a7b5be;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-    outline: none;
-}
 /* ------------------ end of signup-page ------------------ */
 
 /* ------------------ admin-page ------------------ */
+.admin-content {
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+    display: flex;
+}
+
 .admin-menu {
-    position: fixed;
-    left: 0;
-    top: 10.1vh;
-    width: 200px;
-    height: 79.9%;
+    width: 12%;
+    min-width: 150px;
     background: #fff;
 }
 
 .admin-menu p {
-    padding: 20px 0;
-    font-size: 22px;
+    padding: 5px 0;
     text-align: center;
+    font-size: 22px;
     color: #e8491d;
     user-select: none;
 }
 
 .admin-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     border-bottom: 2px solid #f4f4f4;
 }
-.admin-menu ul a {
-    list-style: none;
+.admin-menu a {
+    margin-left: 10px;
     text-decoration: none;
-    text-align: center;
     font-size: 19px;
-    padding-left: 30px;
-    line-height: 60px;
+    line-height: 50px;
     box-sizing: border-box;
     color: #78472C;
 }
-.admin-holder {
-    position: absolute;
-    left: 18%;
-    width: 70%;
-    height: 60vh;
+
+.admin-menu .current-menu {
+    background: #f4f4f4;
 }
-.admin-row1, .admin-row2 {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 50px 30px;
+.admin-holder {
+    margin-left: 10%;
+    width: 75%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: space-around;
+    text-align: center;
 }
 
-.admin {
-    justify-content: center;
-    text-align: center;
-    width: 25%;
-    height: 140px;
-    background: #fff;
+.admin-box {
+    width: 60%;
+    height: fit-content;
+    margin: 20px;
+    padding: 10px;
     color: #78472C;
     border: 3px solid #a7b5be;
     border-radius: 10px;
-    padding-top: 20px;
+    background: #fff;
+}
+
+.admin-box p {
+    padding: 5px;
+}
+
+.admin img {
+    width: 10%;
+}
+
+.admin1-holder {
+    margin-left: 5%;
+    width: 75%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    text-align: center;
+}
+
+.admin1-holder table {
+    width: 90%;
+    border: 2px solid #a7b5be;
+}
+
+th, tr, td {
+    width: auto;
+    padding: 15px;
+    color: #78472C;
+    border: 2px solid #a7b5be;
+}
+.admin2-holder {
+    margin: auto;
+    width: 60vw;
+    display: block;
+}
+
+.admin2-holder  textarea {
+    width: 99%;
+    border: 2px solid #a7b5be;
+    color: #78472C;
+}
+
+.admin2-holder  input {
+    width: 100%;
+    color: #e8491d;
+    font-size: 20px;
+    padding: 5px;
 }
 /* ------------------ end of admin-page ------------------ */
+
 /* ------------------ end of section ------------------ */
 
-/* ------------------ media querries for section ------------------ */
+/* ------------------ media querries for blogs ------------------ */
 @media(max-width: 1200px) {
-    section {
-        /* display: none; */
-    }
-
-    /* ------------ index ---------- */
-    .index-content {
-        left: 10%;
-        width: 80%;
-    }
-
-    .image > img {
-        margin-top: 20px;
-        width: 300px;
-        height: 300px;
-    }
-    
-    .text {
-        margin-top: 10px;
-        width: 60%;
-    }
-
-    .media {
-        width: 50%;
+    .login-signup-message {
+        padding-bottom: 10vh;
     }
 }
+
+@media(max-width: 1000px) {
+    section {
+        margin: auto;
+    }
+}
+
+@media(max-width: 850px) {
+
+}
+/* ------------------ end of media querries for blogs ------------------ */
+
+/* ------------------ media querries for login ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
 @media(max-width: 1000px) {
     section {
         /* display: none; */
-        width: 100vw;
-        background: #f4f4f4;
     }
 
-    .index-content {
-        position: unset;
-        margin: auto;
-        width: 95%;
-    }
-    .image > img {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .text h3 {
-        font-size: 22px;
-    }
-    
-    .highlight {
-        font-size: 30px;
-    }
-    
-    .social-media {
-        margin-top: 40px;
+    .login-admin-user a {
+        margin: 0 40px;
     }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 580px) {
     section {
         /* display: none; */
     }
 
-    .index-content {
-        padding-bottom: 10vh;
-    }
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image > img {
-        margin: 20px;
-        width: 250px;
-        height: 250px;
-    }
-
-    .text {
-        margin-top: 10px;
-        width: 100%;
-        align-items: center;
-    }
-
-    .highlight {
-        font-size: 28px;
-    }
-    .social-media {
-        margin: 10px;
-        background: #f4f4f4;
+    .login-admin-user a {
+        margin: 0 30px;
     }
 }
-/* ------------------ end of media querrie for section ------------------ */
+
+@media(max-width: 270px) {
+    section {
+        /* display: none; */
+    }
+}
+/* ------------------ end of media querries for login ------------------ */
+
+/* ------------------ media querries for signup ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
+@media(max-width: 1000px) {
+    .wrapper {
+        background: #f4f4f4;
+    }
+
+    section {
+        /* display: none; */
+        margin: auto;
+    }
+
+    .signup-content {
+        margin: auto;
+    }
+
+    .signup-text {
+        width: 100%;
+        margin: 10px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 850px) {
+    section {
+        /* display: none; */
+    }
+
+    
+    @media(max-width: 580px) {
+        section {
+            /* display: none; */
+        }
+
+        .signup-holder {
+            justify-content: center;
+        }
+
+        .signup-form {
+            min-width: 300px;
+        }
+
+        .signup-form label {
+            margin: 8px 30px;
+            color: #78472C;
+            font-size: 20px;
+        }
+        
+        .signup-form input {
+            margin: 8px 30px;
+            font-size: 16px;
+        }
+        
+        .signup-form #btn {
+            font-size: 20px;
+            margin: 20px 30px;
+        }
+    }
+}
+/* ------------------ end of media querries for signup ------------------ */
+
+/* ------------------ media querries for admin ------------------ */
+@media(max-width: 1400px) {
+    .wrapper {
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-content {
+        width: 100vw;
+    }
+
+    .admin-menu {
+        width: 25%;
+    }
+}
+
+@media(max-width: 890px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 30%;
+    }
+
+    admin1-holder {
+        width: 75%;
+        height: fit-content;
+    }
+    
+    .admin1-holder table {
+        width: 90%;
+        font-size: 16px;
+    }   
+
+    .admin1-holder .td-email {
+        display: none;
+    }
+}
+
+@media(max-width: 700px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 40%;
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 50%;
+    }
+
+    .admin1-holder .td-no {
+        display: none;
+    }
+}
+
+@media(max-width: 550px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 65%;
+    }
+
+    .admin1-holder table {
+        width: 90%;
+        font-size: 12px;
+    }  
+}
+
+@media(max-width: 535px) {
+    section {
+        /* display: none; */
+    }
+
+    .admin-menu {
+        width: 70%;
+    }
+}
+/* ------------------ end of media querries for admin ------------------ */
 
 /* ------------------ footer ------------------ */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 10%;
+    width: 100%;
     background: #fff;
     color:#78472C;
+    border-top: 2px solid orangered;
+}
+
+.footer-orangered {
+    padding: 20px;
+    color: #e8491d;
+}
+
+.footer-row1 {
+    width: 90%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    line-height: 30px;
+    justify-content: space-between;
+}
+
+.follow-us {
+    border-bottom: #e8491d 1px solid;
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.social-media img {
+    padding-right: 1.2rem;
+}
+
+.media {
+    width: 50%;
+}
+
+.contact-us {
+    margin-left: 20px;
+}
+
+.copy-right {
+    line-height: 50px;
+    text-align: center;
+}
+
+@media(max-width: 1000px) {
+    footer, .footer-row1 {
+        /* display: none; */
+        display: block;
+    }
+
+    .about-us, .contact-us {
+        text-align: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .social-media {
+        /* display: none; */
+    }
+
+    .media {
+        width: 70%;
+    }
 }
 /* ------------------ footer ------------------ */

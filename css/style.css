@@ -55,6 +55,7 @@ header {
     header {
         /* display: none; */
     }
+    
     .nav-menu {
     width: 38%;
     }
@@ -115,54 +116,152 @@ section {
 .index-content {
     padding: 50px 0;
     width: 100%;
-    height: 60vh;
+    height: 80vh;
 }
 
 .index-holder {
-    margin: auto;
+    margin: 100px auto;
     width: 75%;
     display: flex;
     justify-content: space-between;
 }
 
 .index-holder  img {
-    width: 30%;
+    width: 300px;
+    height: auto;
 }
 
-.text {
+.index-text {
     margin-top: 30px;
     width: 60%;
     height: auto;
 }
 
-.text h3{
+.index-text h3{
     color: #78472C;
     letter-spacing: 0.1em;
     line-height: 2.3em;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 .highlight {
     color: #78472C;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
 }
-
-.social-media {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.social-media img {
-    padding-right: 1.2rem;
-}
-
-.media {
-    width: 50%;
-}
 /* ------------------ end of index-page ------------------ */
+
+/* ------------------ media querries for index ------------------ */
+@media(max-width: 1200px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-text h3{
+        letter-spacing: 0.05em;
+        line-height: 2.0em;
+        font-size: 20px;
+    }
+
+    .highlight {
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .media {
+        width: 50%;
+    }
+}
+@media(max-width: 1100px) {
+    .index-holder {
+        width: 82%;
+    }
+}
+
+@media(max-width: 1000px) {
+    body {
+        background: #f4f4f4;
+    }
+    
+    section {
+        /* display: none; */
+    }
+
+    .index-content {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
+
+    .index-holder {
+        width: 100%;
+        margin: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .index-holder img {
+        width: 250px;
+    }
+    
+    .index-text h3 {
+        width: 100vw;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .highlight {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-holder img {
+        width: 220px;
+    }
+    
+    .index-text h3 {
+        width: 100vw;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .highlight {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 450px) {
+    section {
+        /* display: none; */
+    }
+
+    .index-holder img {
+        width: 200px;
+    }
+    
+    .index-text h3 {
+        width: 100vw;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .highlight {
+        font-size: 20px;
+    }
+}
+@media(max-width: 250px) {
+    section {
+        display: none;
+    }
+}    
+/* ------------------ end of media querries for index ------------------ */
 
 /* ------------------ about-page ------------------ */
 .about-content {
@@ -202,13 +301,6 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.techno-row1, .techno-row2 {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 20px 0;
-}
-
 .technologies img {
     width: 30%;
 }
@@ -219,492 +311,13 @@ section {
 }
 /* ------------------ end of about-page ------------------ */
 
-/* ------------------ contact-page ------------------ */
-.contact-content {
-    width: 100%;
-    height: auto;
-    background: #f4f4f4;
-}
-
-.contact-text {
-    color: #78472C;
-    font-size: 20px;
-    text-align: center;
-}
-
-.contact-form {
-    display: block;
-    width: 40%;
-    margin: 20px auto;
-    padding: 20px 0;
-    border: 3px solid #a7b5be;
-    border-radius: 10px;
-    background: #fff;
-}
-
-
-.contact-form label {
-    margin: 0px 50px;
-    color: #78472C;
-    font-size: 20px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 80%;
-    margin: 0  0 15px 50px;
-    color: #78472C;
-    padding: 4px 0;
-    font-size: 16px;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-}
-
-.contact-form #btn {
-    width: 81%;
-    font-size: 20px;
-    color: #e8491d;
-    background: #a7b5be;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-    margin: 20px 50px;
-}
-
-.login-signup-message {
-    padding: 20px;
-    text-align: center;
-    color: #78472C;
-    font-size: 22px;
-    font-weight: 400;
-    background: #f4f4f4;
-}
-
-.login-signup-message span a {
-    color: #e8491d;
-    text-decoration: none;
-}
-/* ------------------ end of contact-page ------------------ */
-
-/* ------------------ blogs-page ------------------ */
-.blogs-content {
-    width: 100%;
-    height: auto;
-    background: #f4f4f4;
-}
-.blogs-holder {
-    margin: auto;
-    width: 80%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    justify-content: space-between;
-}
-
-.blog {
-    width: 95%;
-    height: fit-content;
-    margin: 20px 0;
-}
-
-.blog-box {
-    width: 360px;
-    height: 220px;
-    background: #f4f4f4;
-}
-
-.blog-box:hover {
-    opacity: 70%;
-}
-.blogs-holder a {
-    width: 70%;
-    text-decoration: none;
-    color: #78472C;
-    background: #ccc;
-}
-
-.blog-image {
-    width: 100%;
-}
-
-.blog-time {
-    font-size: 13px;
-    text-align: end;
-}
-
-.blog-author {
-    font-size: 13px;
-}
-
-.blog-title {
-    margin: 10px 0 0 0;
-    color: #e8491d;
-}
-
-.blog-text {
-    text-align: justify;
-}
-
-.blog-paragraph {
-    margin: 10px 0;
-    text-align: justify;
-}
-
-.blogs-holder .blog-create {
-    margin: auto;
-    width: 60%;
-    height: 34vh;
-    padding: 25px;
-    color: #78472C;
-    font-size: 20px;
-    border: 2px solid #a7b5be;
-}
-/* ------------------ end of blogs-page ------------------ */
-
-/* ------------------ login-page ------------------ */
-.login-content {
-    width: 100%;
-    height: auto;
-    background: #f4f4f4;
-}
-
-.login-holder {
-    margin: auto;
-    width: 80%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    justify-content: space-between;
-}
-
-.login-text {
-    width: 15%;
-    color: #78472C;
-    font-size: 30px;
-
-}
-
-.login-text p {
-    margin: 0;
-    padding: 0;
-}
-.login-form {
-    display: block;
-    width: 90%;
-    min-width: 400px;
-    height: fit-content;
-    padding: 15px;
-    border: 3px solid #a7b5be;
-    border-radius: 10px;
-    background: #fff;
-}
-
-
-.login-form label {
-    margin: 10px 50px;
-    color: #78472C;
-    font-size: 20px;
-}
-
-.login-form input {
-    width: 80%;
-    margin: 10px 50px;
-    color: #78472C;
-    padding: 4px 0;
-    font-size: 16px;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-}
-
-.login-form #btn {
-    width: 81%;
-    font-size: 20px;
-    color: #e8491d;
-    background: #a7b5be;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-    margin: 30px 50px;
-}
-
-.login-admin-user a {
-    text-decoration: none;
-    color: #e8491d;
-    margin: 0 50px;
-    font-size: 20px;
-}
-/* ------------------ end of login-page ------------------ */
-
-/* ------------------ signup-page ------------------ */
-.signup-content {
-    width: 100%;
-    height: auto;
-    background: #f4f4f4;
-}
-
-.signup-holder {
-    margin: auto;
-    width: 80%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: space-between;
-}
-
-.signup-text {
-    width: 15%;
-    color: #78472C;
-    font-size: 30px;
-}
-
-.signup-text p {
-    margin: 0;
-    padding: 0;
-}
-
-.signup-form {
-    display: block;
-    width: 90%;
-    min-width: 400px;
-    height: fit-content;
-    padding: 15px;
-    border: 3px solid #a7b5be;
-    border-radius: 10px;
-    background: #fff;
-}
-
-.signup-form label {
-    margin: 10px 50px;
-    color: #78472C;
-    font-size: 20px;
-}
-
-.signup-form input {
-    width: 80%;
-    margin: 0px 50px;
-    color: #78472C;
-    padding: 4px 0;
-    font-size: 16px;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-}
-
-.signup-form #btn {
-    width: 81%;
-    margin: 30px 50px;
-    color: #e8491d;
-    font-size: 20px;
-    background: #a7b5be;
-    border: 3px solid #a7b5be;
-    border-radius: 8px;
-}
-/* ------------------ end of signup-page ------------------ */
-
-/* ------------------ admin-page ------------------ */
-.admin-content {
-    width: 100%;
-    height: auto;
-    background: #f4f4f4;
-    display: flex;
-}
-
-.admin-menu {
-    width: 20%;
-    background: #fff;
-}
-
-.admin-menu p {
-    padding: 5px 0;
-    text-align: center;
-    font-size: 22px;
-    color: #e8491d;
-    user-select: none;
-}
-
-.admin-menu li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border-bottom: 2px solid #f4f4f4;
-}
-.admin-menu a {
-    text-decoration: none;
-    font-size: 19px;
-    line-height: 50px;
-    box-sizing: border-box;
-    color: #78472C;
-}
-
-.admin-menu .current-menu {
-    background: #f4f4f4;
-}
-.admin-holder {
-    margin-left: 18%;
-    width: 75%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    text-align: center;
-}
-
-.admin-box {
-    width: 60%;
-    height: fit-content;
-    margin: 2px;
-    color: #78472C;
-    border: 3px solid #a7b5be;
-    border-radius: 10px;
-    background: #fff;
-}
-
-.admin img {
-    width: 10%;
-}
-
-.admin1-holder {
-    margin-left: 5%;
-    width: 75%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    text-align: center;
-}
-
-.admin1-holder table {
-    width: 90%;
-    border: 2px solid #a7b5be;
-}
-
-th, tr, td {
-    width: auto;
-    padding: 15px;
-    color: #78472C;
-    border: 2px solid #a7b5be;
-}
-.admin2-holder {
-    margin: auto;
-    width: 60vw;
-    display: block;
-}
-
-.admin2-holder  textarea {
-    width: 99%;
-    border: 2px solid #a7b5be;
-    color: #78472C;
-}
-
-.admin2-holder  input {
-    width: 100%;
-    color: #e8491d;
-    font-size: 20px;
-    padding: 5px;
-}
-/* ------------------ end of admin-page ------------------ */
-/* ------------------ end of section ------------------ */
-
-/* ------------------ media querries for index ------------------ */
-@media(max-width: 1200px) {
-    section {
-        /* display: none; */
-    }
-
-    .index-content {
-        left: 10%;
-        width: 80%;
-    }
-
-    .image > img {
-        margin-top: 20px;
-        width: 300px;
-        height: 300px;
-    }
-    
-    .text {
-        margin-top: 0px;
-        width: 60%;
-    }
-
-    .text h3{
-        letter-spacing: 0.05em;
-        line-height: 2.0em;
-        font-size: 25px;
-    }
-
-    .highlight {
-        font-size: 30px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .media {
-        width: 50%;
-    }
-}
-@media(max-width: 1000px) {
-    section {
-        /* display: none; */
-        width: 100vw;
-        background: #f4f4f4;
-    }
-
-    .index-content {
-        position: unset;
-        margin: auto;
-        width: 95%;
-    }
-    
-    .text h3 {
-        font-size: 22px;
-        text-align: center;
-    }
-    
-    .highlight {
-        font-size: 22px;
-        margin-left: 7%;
-    }
-    
-    .social-media {
-        margin-top: 40px;
-    }
-}
-
-@media(max-width: 800px) {
-    section {
-        /* display: none; */
-        height: fit-content;
-    }
-
-    .index-content {
-        padding-bottom: 10vh;
-    }
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image > img {
-        margin: 20px;
-        width: 250px;
-        height: 250px;
-    }
-
-    .text {
-        margin-top: 0px;
-        width: 100%;
-        align-items: center;
-    }
-
-    .highlight {
-        font-size: 28px;
-    }
-    .social-media {
-        margin: 10px;
-    }
-}
-/* ------------------ end of media querries for index ------------------ */
-
 /* ------------------ media querries for about ------------------ */
 @media(max-width: 1400px) {
-    .about-content {
-        left: 9%;
-    }
+
+}
+
+.technologies {
+    width: 75%;
 }
 
 @media(max-width: 1200px) {
@@ -715,6 +328,10 @@ th, tr, td {
     .content-title {
         padding: 10px 0;
         text-align: center;
+    }
+
+    .technologies {
+        width: 90%;
     }
 }
 
@@ -781,7 +398,84 @@ th, tr, td {
         width: 20%;
     }
 }
+
+@media(max-width: 450px) {
+    .about-text p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 250px) {
+    body {
+        display: none;
+    }
+}
 /* ------------------ end of media querries for about ------------------ */
+
+/* ------------------ contact-page ------------------ */
+.contact-content {
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+}
+
+.contact-text {
+    color: #78472C;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px 0;
+    border: 3px solid #a7b5be;
+    border-radius: 10px;
+    background: #fff;
+}
+
+
+.contact-form label {
+    margin: 0px 50px;
+    color: #78472C;
+    font-size: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    margin: 0  0 15px 50px;
+    color: #78472C;
+    padding: 4px 0;
+    font-size: 16px;
+    border: 3px solid #a7b5be;
+    border-radius: 8px;
+}
+
+.contact-form #btn {
+    width: 81%;
+    font-size: 20px;
+    color: #e8491d;
+    background: #a7b5be;
+    border: 3px solid #a7b5be;
+    border-radius: 8px;
+    margin: 20px 50px;
+}
+
+.login-signup-message {
+    padding: 20px;
+    text-align: center;
+    color: #78472C;
+    font-size: 22px;
+    font-weight: 400;
+    background: #f4f4f4;
+}
+
+.login-signup-message span a {
+    color: #e8491d;
+    text-decoration: none;
+}
+/* ------------------ end of contact-page ------------------ */
 
 /* ------------------ media querries for contact ------------------ */
 @media(max-width: 1400px) {
@@ -789,23 +483,24 @@ th, tr, td {
 }
 
 @media(max-width: 1000px) {
-    .wrapper {
-        background: #f4f4f4;
-    }
-
     section {
         /* display: none; */
-        margin: auto;
+        /* margin: auto; */
     }
 
     .contact-content {
         margin: auto;
     }
 
-    .contact-text {
-        width: 100%;
-        margin: 10px;
-        font-size: 20px;
+    .contact-form {
+        width: 50%;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form #btn {
+        margin: 10px 40px;
     }
 }
 
@@ -814,42 +509,270 @@ th, tr, td {
         /* display: none; */
     }
 
-    
-    @media(max-width: 580px) {
-        section {
-            /* display: none; */
-        }
+    .contact-text p {
+        margin: auto;
+        width: 60%;
+    }
 
-        .contact-holder {
-            justify-content: center;
-        }
+    .contact-form {
+        width: 60%;
+    }
 
-        .contact-form {
-            min-width: 300px;
-        }
+}
 
-        .contact-form label {
-            margin: 10px 30px;
-            color: #78472C;
-            font-size: 20px;
-        }
-        
-        .contact-form input, .contact-form textarea {
-            margin: 10px 30px;
-            font-size: 16px;
-        }
-        
-        .contact-form #btn {
-            /* font-size: 20px; */
-            margin: 30px 30px;
-        }
+@media(max-width: 580px) {
+    section {
+        /* display: none; */
+    }
 
-        .login-signup-message {
-            font-size: 18px;
-        }
+    .contact-form {
+        width: 70%;
+    }
+
+    .login-signup-message {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 400px) {
+    section {
+        /* display: none; */
+    }
+
+    .contact-text p {
+        margin: auto;
+        width: 60%;
+    }
+}
+
+@media(max-width: 420px) {
+    section {
+        display: none;
+    }
+  
+    .contact-holder {
+        width: 100%;
+        margin: auto;
+    }
+
+    .contact-form {
+        margin: auto;
+        padding: 5px;
+    }
+
+    .contact-form form {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form #btn {
+        margin: 0;
     }
 }
 /* ------------------ end of media querries for contact ------------------ */
+
+/* ------------------ blogs-page ------------------ */
+.blogs-content {
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+}
+.blogs-holder {
+    margin: auto;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: space-between;
+}
+
+.blog {
+    width: 90%;
+    height: fit-content;
+    margin: 20px 0;
+}
+
+.blog-box {
+    width: 360px;
+    height: 220px;
+    background: #f4f4f4;
+}
+
+.blog-box:hover {
+    opacity: 70%;
+}
+.blogs-holder a {
+    width: 68%;
+    text-decoration: none;
+    color: #78472C;
+}
+
+.blog-img {
+    width: 97%;
+}
+
+.blog-time {
+    font-size: 13px;
+    text-align: end;
+}
+
+.blog-author {
+    font-size: 13px;
+}
+
+.blog-title {
+    margin: 10px 0 0 0;
+    color: #e8491d;
+}
+
+.blog-text {
+    text-align: justify;
+}
+
+.blog-paragraph {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.blogs-holder .blog-create {
+    margin: auto;
+    width: 60%;
+    height: 34vh;
+    padding: 25px;
+    color: #78472C;
+    font-size: 20px;
+    border: 2px solid #a7b5be;
+}
+/* ------------------ end of blogs-page ------------------ */
+
+/* ------------------ login-page ------------------ */
+.login-admin-user a {
+    text-decoration: none;
+    color: #e8491d;
+    margin: 0 50px;
+    font-size: 20px;
+}
+/* ------------------ end of login-page ------------------ */
+
+/* ------------------ signup-page ------------------ */
+
+/* ------------------ end of signup-page ------------------ */
+
+/* ------------------ admin-page ------------------ */
+.admin-content {
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+    display: flex;
+}
+
+.admin-menu {
+    width: 12%;
+    min-width: 150px;
+
+    background: #fff;
+}
+
+.admin-menu p {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 22px;
+    color: #e8491d;
+    user-select: none;
+}
+
+.admin-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 2px solid #f4f4f4;
+}
+.admin-menu a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 50px;
+    box-sizing: border-box;
+    color: #78472C;
+}
+
+.admin-menu .current-menu {
+    background: #f4f4f4;
+}
+.admin-holder {
+    margin-left: 10%;
+    width: 75%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: space-around;
+    text-align: center;
+}
+
+.admin-box {
+    width: 60%;
+    height: fit-content;
+    margin: 20px;
+    padding: 10px;
+    color: #78472C;
+    border: 3px solid #a7b5be;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.admin-box p {
+    padding: 5px;
+}
+
+.admin img {
+    width: 10%;
+}
+
+.admin1-holder {
+    margin-left: 5%;
+    width: 75%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    text-align: center;
+}
+
+.admin1-holder table {
+    width: 90%;
+    border: 2px solid #a7b5be;
+}
+
+th, tr, td {
+    width: auto;
+    padding: 15px;
+    color: #78472C;
+    border: 2px solid #a7b5be;
+}
+.admin2-holder {
+    margin: auto;
+    width: 60vw;
+    display: block;
+}
+
+.admin2-holder  textarea {
+    width: 99%;
+    border: 2px solid #a7b5be;
+    color: #78472C;
+}
+
+.admin2-holder  input {
+    width: 100%;
+    color: #e8491d;
+    font-size: 20px;
+    padding: 5px;
+}
+/* ------------------ end of admin-page ------------------ */
+
+/* ------------------ end of section ------------------ */
 
 /* ------------------ media querries for blogs ------------------ */
 @media(max-width: 1200px) {
@@ -875,64 +798,28 @@ th, tr, td {
 }
 
 @media(max-width: 1000px) {
-    .wrapper {
-        background: #f4f4f4;
-    }
-
     section {
         /* display: none; */
-        margin: auto;
     }
 
-    .login-content {
-        margin: auto;
-    }
-
-    .login-text {
-        width: 100%;
-        margin: 10px;
-        font-size: 20px;
+    .login-admin-user a {
+        margin: 0 40px;
     }
 }
 
-@media(max-width: 850px) {
+@media(max-width: 580px) {
     section {
         /* display: none; */
     }
 
-    
-    @media(max-width: 580px) {
-        section {
-            /* display: none; */
-        }
+    .login-admin-user a {
+        margin: 0 30px;
+    }
+}
 
-        .login-holder {
-            justify-content: center;
-        }
-
-        .login-form {
-            min-width: 300px;
-        }
-
-        .login-form label {
-            margin: 10px 30px;
-            color: #78472C;
-            font-size: 20px;
-        }
-        
-        .login-form input {
-            margin: 10px 30px;
-            font-size: 16px;
-        }
-        
-        .login-form #btn {
-            font-size: 20px;
-            margin: 30px 30px;
-        }
-
-        .login-admin-user a {
-            margin: 0 30px;
-        }
+@media(max-width: 270px) {
+    section {
+        /* display: none; */
     }
 }
 /* ------------------ end of media querries for login ------------------ */
@@ -968,7 +855,6 @@ th, tr, td {
         /* display: none; */
     }
 
-    
     @media(max-width: 580px) {
         section {
             /* display: none; */
@@ -1017,7 +903,6 @@ th, tr, td {
 
     .admin-content {
         width: 100vw;
-        /* background: wheat; */
     }
 
     .admin-menu {
@@ -1034,7 +919,7 @@ th, tr, td {
         width: 30%;
     }
 
-    admin1-holder {
+    .admin1-holder {
         width: 75%;
         height: fit-content;
     }
@@ -1067,7 +952,7 @@ th, tr, td {
     .admin-menu {
         width: 50%;
     }
-
+  
     .admin1-holder .td-no {
         display: none;
     }
@@ -1104,7 +989,7 @@ footer {
     width: 100%;
     background: #fff;
     color:#78472C;
-    border-top: orangered solid 3px;
+    border-top: 2px solid orangered;
 }
 
 .footer-orangered {
@@ -1118,12 +1003,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     line-height: 30px;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     justify-content: space-between;
-}
-
-.about-us {
-    /* border-bottom: #e8491d 1px solid; */
 }
 
 .follow-us {
@@ -1131,12 +1011,47 @@ footer {
     text-align: center;
 }
 
+.social-media {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media img {
+    padding-right: 1.2rem;
+}
+
+.media {
+    width: 50%;
+}
+
 .contact-us {
-    /* border-bottom: #e8491d 1px solid; */
     margin-left: 20px;
 }
+
 .copy-right {
     line-height: 50px;
     text-align: center;
+}
+
+@media(max-width: 1000px) {
+    footer, .footer-row1 {
+        /* display: none; */
+        display: block;
+    }
+
+    .about-us, .contact-us {
+        text-align: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .social-media {
+        /* display: none; */
+    }
+
+    .media {
+        width: 70%;
+    }
 }
 /* ------------------ footer ------------------ */

@@ -549,7 +549,7 @@ section {
     section {
         display: none;
     }
-
+  
     .contact-holder {
         width: 100%;
         margin: auto;
@@ -673,6 +673,7 @@ section {
 .admin-menu {
     width: 12%;
     min-width: 150px;
+
     background: #fff;
 }
 
@@ -854,7 +855,6 @@ th, tr, td {
         /* display: none; */
     }
 
-    
     @media(max-width: 580px) {
         section {
             /* display: none; */
@@ -919,7 +919,7 @@ th, tr, td {
         width: 30%;
     }
 
-    admin1-holder {
+    .admin1-holder {
         width: 75%;
         height: fit-content;
     }
@@ -952,7 +952,7 @@ th, tr, td {
     .admin-menu {
         width: 50%;
     }
-
+  
     .admin1-holder .td-no {
         display: none;
     }

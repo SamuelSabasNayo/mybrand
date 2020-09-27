@@ -1,22 +1,27 @@
-body, .wrapper {
+* {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
-    overflow-y: scroll;
 }
 
 /* ------------------ header ------------------ */
 header {
-    background: #fff;
-    height: 9.5vh;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0 6rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
+    background: #fff;
     border-bottom: 5px solid #e8491d;
+    z-index: 1;
 }
 
 .logo-box img {
@@ -98,7 +103,7 @@ header {
 /* ------------------ section ------------------ */
 section {
     width: 100vw;
-    height: 80vh;
+    height: auto;
     background: #f4f4f4;
 }
 
@@ -107,31 +112,27 @@ section {
 }
 
 /* ------------------ index-page ------------------ */
-
 .index-content {
-    position: relative;
+    padding: 50px 0;
+    width: 100%;
+    height: 60vh;
 }
 
-.index-content {
-    position: absolute;
-    left: 14%;
-    top: 22.5%;
+.index-holder {
+    margin: auto;
     width: 75%;
-    background: #f4f4f4;
-}
-
-.content {
     display: flex;
     justify-content: space-between;
 }
 
-.image > img {
-    width: 100%;
+.index-holder  img {
+    width: 30%;
 }
 
 .text {
-    margin-top: 0px;
+    margin-top: 30px;
     width: 60%;
+    height: auto;
 }
 
 .text h3{
@@ -149,7 +150,7 @@ section {
 }
 
 .social-media {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -165,11 +166,12 @@ section {
 
 /* ------------------ about-page ------------------ */
 .about-content {
-    position: absolute;
-    left: 14%;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
 }
 .content-title {
-    padding: 20px 0 0 0;
+    padding: 20px;
     text-align: center;
 }
 .orangered {
@@ -181,10 +183,11 @@ section {
 }
 
 .about-text p {
+    margin: auto;
     color: #78472C;
     line-height: 2.3em;
-    font-size: 19px;
-    width: 95%;
+    font-size: 20px;
+    width: 80%;
 }
 
 .more-infos a{
@@ -193,8 +196,8 @@ section {
 }
 
 .technologies {
-    width: 95%;
-    margin: 20px 0;
+    width: 70%;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -223,32 +226,17 @@ section {
     background: #f4f4f4;
 }
 
-.contact-holder {
-    margin: auto;
-    width: 80%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    justify-content: space-between;
-}
-
 .contact-text {
-    width: 15%;
     color: #78472C;
-    font-size: 30px;
-}
-
-.contact-text p {
-    margin: 0;
-    padding: 0;
+    font-size: 20px;
+    text-align: center;
 }
 
 .contact-form {
     display: block;
-    width: 90%;
-    min-width: 400px;
-    height: fit-content;
-    padding: 15px;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px 0;
     border: 3px solid #a7b5be;
     border-radius: 10px;
     background: #fff;
@@ -263,7 +251,7 @@ section {
 
 .contact-form input, .contact-form textarea {
     width: 80%;
-    margin: 0px 50px;
+    margin: 0  0 15px 50px;
     color: #78472C;
     padding: 4px 0;
     font-size: 16px;
@@ -278,10 +266,11 @@ section {
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    margin: 0px 50px 30px 50px;
+    margin: 20px 50px;
 }
 
 .login-signup-message {
+    padding: 20px;
     text-align: center;
     color: #78472C;
     font-size: 22px;
@@ -297,10 +286,6 @@ section {
 
 /* ------------------ blogs-page ------------------ */
 .blogs-content {
-    /* position: relative; */
-}
-
-.blogs-content {
     width: 100%;
     height: auto;
     background: #f4f4f4;
@@ -308,39 +293,70 @@ section {
 .blogs-holder {
     margin: auto;
     width: 80%;
-    height: fit-content;
-}
-
-
-.blogs-row {
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: space-between;
-    list-style: none;
-    margin: 0px 0;
-}
-
-.blog-img {
-    width: 60%;
-}
-
-.blog-img:hover {
-    opacity: 60%;
 }
 
 .blog {
-    text-align: center;
+    width: 95%;
+    height: fit-content;
+    margin: 20px 0;
 }
 
-.blog p, .blog p a {
-    color: #78472C;
+.blog-box {
+    width: 360px;
+    height: 220px;
+    background: #f4f4f4;
+}
+
+.blog-box:hover {
+    opacity: 70%;
+}
+.blogs-holder a {
+    width: 70%;
     text-decoration: none;
+    color: #78472C;
+    background: #ccc;
 }
 
-.blog-paragraph {
+.blog-image {
+    width: 100%;
+}
+
+.blog-time {
+    font-size: 13px;
+    text-align: end;
+}
+
+.blog-author {
+    font-size: 13px;
+}
+
+.blog-title {
+    margin: 10px 0 0 0;
+    color: #e8491d;
+}
+
+.blog-text {
     text-align: justify;
 }
 
+.blog-paragraph {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.blogs-holder .blog-create {
+    margin: auto;
+    width: 60%;
+    height: 34vh;
+    padding: 25px;
+    color: #78472C;
+    font-size: 20px;
+    border: 2px solid #a7b5be;
+}
 /* ------------------ end of blogs-page ------------------ */
 
 /* ------------------ login-page ------------------ */
@@ -807,7 +823,7 @@ th, tr, td {
         .contact-holder {
             justify-content: center;
         }
-      
+
         .contact-form {
             min-width: 300px;
         }
@@ -1085,20 +1101,42 @@ th, tr, td {
 
 /* ------------------ footer ------------------ */
 footer {
-    position: relative;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 9vh;
+    width: 100%;
     background: #fff;
     color:#78472C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: orangered solid 3px;
 }
 
+.footer-orangered {
+    padding: 20px;
+    color: #e8491d;
+}
+
+.footer-row1 {
+    width: 90%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    line-height: 30px;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    justify-content: space-between;
+}
+
+.about-us {
+    /* border-bottom: #e8491d 1px solid; */
+}
+
+.follow-us {
+    border-bottom: #e8491d 1px solid;
+    text-align: center;
+}
+
+.contact-us {
+    /* border-bottom: #e8491d 1px solid; */
+    margin-left: 20px;
+}
+.copy-right {
+    line-height: 50px;
+    text-align: center;
+}
 /* ------------------ footer ------------------ */

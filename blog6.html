@@ -7,22 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="wrapper">
-        <header>
-            <div class="logo-box">
-                <a href="index.html"><img class="logo" src="assets/images/Logo.svg" alt="logo"></a>
-            </div>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="current"><a href="blogs.html">Blogs</a></li>         
-                    <!-- <li><a href="login.html">Account</a></li>         -->
-                </ul>
-            </div>
-        </header>
+<body onresize="windowReload()">
+    <header>
+        <div class="logo-box">
+            <a href="index.html"><img class="logo" src="assets/images/Logo.svg" alt="logo"></a>
+        </div>
+        <div class="nav-menu">
+            <div class="openMenu"><img src="assets/images/Menu.svg" alt="menu" width="55"></div>
+            <div class="closeMenu"><img src="assets/images/Close.svg" alt="close" width="55"></div>
+            <ul class="navMenuUl">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="current"><a href="blogs.html">Blogs</a></li>         
+            </ul>
+        </div>
+        <script src="js/script.js"></script>
+    </header>
         <section>
             <div class="content-title">
                 <h2><span class="orangered">Git Version</span> <span class="dark-orange">Control</span></h2>

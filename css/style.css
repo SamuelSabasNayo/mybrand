@@ -28,11 +28,18 @@ header {
     width: 80%;
 }
 
+.openMenu, .closeMenu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: #e8491d;
+}
+
 .nav-menu {
     width: 35%;
 }
 
-.nav-menu ul {
+.navMenuUl {
     list-style: none;
     display: flex;
     width: 100%;
@@ -75,28 +82,44 @@ header {
 @media(max-width: 1000px) {
     header {
         /* display: none; */
-        height: fit-content;
-        flex-direction: column;
-        justify-content: center;
     }
 
     .nav-menu{
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-menu ul {
-        /* display: none; */
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
+        width: 50%;
     }
 }
-@media(max-width: 768px) {
+@media(max-width: 800px) {
     header {
         /* display: none; */
+        align-items: unset;
+    }
+
+    .nav-menu {
+        width: 20%;
+        text-align: center;
+    }
+
+    .navMenuUl {
+        display: none;
+        height: 20vh;
+        flex-direction: column;
+        transition: .5s ease;
+    }
+
+    .navMenuUl a {
+        text-align: center;
+    }
+
+    .openMenu {
+        margin: 8px 0 0 0;
+        display: block;
+        cursor: pointer;
+    }
+
+    .closeMenu {
+        margin: 8px 0 0 0;
+        display: none;
+        cursor: pointer;
     }
 }
 /* ------------------ end of media querry for header ------------------ */
@@ -258,7 +281,7 @@ section {
 }
 @media(max-width: 250px) {
     section {
-        display: none;
+        /* display: none; */
     }
 }    
 /* ------------------ end of media querries for index ------------------ */
@@ -407,7 +430,7 @@ section {
 
 @media(max-width: 250px) {
     body {
-        display: none;
+        /* display: none; */
     }
 }
 /* ------------------ end of media querries for about ------------------ */
@@ -534,43 +557,63 @@ section {
     }
 }
 
-@media(max-width: 400px) {
+
+@media(max-width: 480px) {
     section {
         /* display: none; */
-    }
-
-    .contact-text p {
-        margin: auto;
-        width: 60%;
-    }
-}
-
-@media(max-width: 420px) {
-    section {
-        display: none;
-    }
-  
-    .contact-holder {
-        width: 100%;
-        margin: auto;
-    }
-
-    .contact-form {
-        margin: auto;
-        padding: 5px;
-    }
-
-    .contact-form form {
-        width: 100%;
-        margin: auto;
-        padding: 0;
     }
 
     .contact-form label,
     .contact-form input,
     .contact-form textarea,
     .contact-form #btn {
-        margin: 0;
+        margin: 8px 30px;
+    }
+}
+
+@media(max-width: 420px) {
+    section {
+        /* display: none; */
+    }
+    
+    .contact-holder {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .contact-form {
+        margin: auto;
+        padding: 5px;
+    }
+    
+    .contact-form form {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+}
+
+@media(max-width: 400px) {
+    section {
+        /* display: none; */
+    }
+
+    .contact-text p {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 320px) {
+    section {
+        /* display: none; */
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form #btn {
+        margin: 8px 20px;
     }
 }
 /* ------------------ end of media querries for contact ------------------ */
@@ -649,6 +692,24 @@ section {
 }
 /* ------------------ end of blogs-page ------------------ */
 
+/* ------------------ media querries for blogs ------------------ */
+@media(max-width: 1200px) {
+    .login-signup-message {
+        padding-bottom: 10vh;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        margin: auto;
+    }
+}
+
+@media(max-width: 850px) {
+
+}
+/* ------------------ end of media querries for blogs ------------------ */
+
 /* ------------------ login-page ------------------ */
 .login-admin-user a {
     text-decoration: none;
@@ -658,9 +719,120 @@ section {
 }
 /* ------------------ end of login-page ------------------ */
 
+/* ------------------ media querries for login ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
+@media(max-width: 1000px) {
+    section {
+        /* display: none; */
+    }
+
+    .login-admin-user a {
+        margin: 0 40px;
+    }
+}
+
+@media(max-width: 580px) {
+    section {
+        /* display: none; */
+    }
+
+    .login-admin-user a {
+        margin: 0 30px;
+    }
+}
+
+@media(max-width: 330px) {
+    section {
+        /* display: none; */
+    }
+
+    .login-admin-user a {
+        margin: 0 10px;
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 230px) {
+    section {
+        /* display: none; */
+    }
+
+    .login-admin-user a {
+        width: 100%;
+        margin: 0;
+    }
+}
+/* ------------------ end of media querries for login ------------------ */
 /* ------------------ signup-page ------------------ */
 
 /* ------------------ end of signup-page ------------------ */
+
+/* ------------------ media querries for signup ------------------ */
+@media(max-width: 1400px) {
+    
+}
+
+@media(max-width: 1000px) {
+    .wrapper {
+        background: #f4f4f4;
+    }
+
+    section {
+        /* display: none; */
+        margin: auto;
+    }
+
+    .signup-content {
+        margin: auto;
+    }
+
+    .signup-text {
+        width: 100%;
+        margin: 10px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 850px) {
+    section {
+        /* display: none; */
+    }
+
+    @media(max-width: 580px) {
+        section {
+            /* display: none; */
+        }
+
+        .signup-holder {
+            justify-content: center;
+        }
+
+        .signup-form {
+            min-width: 300px;
+        }
+
+        .signup-form label {
+            margin: 8px 30px;
+            color: #78472C;
+            font-size: 20px;
+        }
+        
+        .signup-form input {
+            margin: 8px 30px;
+            font-size: 16px;
+        }
+        
+        .signup-form #btn {
+            font-size: 20px;
+            margin: 20px 30px;
+        }
+    }
+}
+/* ------------------ end of media querries for signup ------------------ */
+
 
 /* ------------------ admin-page ------------------ */
 .admin-content {
@@ -773,119 +945,6 @@ th, tr, td {
 /* ------------------ end of admin-page ------------------ */
 
 /* ------------------ end of section ------------------ */
-
-/* ------------------ media querries for blogs ------------------ */
-@media(max-width: 1200px) {
-    .login-signup-message {
-        padding-bottom: 10vh;
-    }
-}
-
-@media(max-width: 1000px) {
-    section {
-        margin: auto;
-    }
-}
-
-@media(max-width: 850px) {
-
-}
-/* ------------------ end of media querries for blogs ------------------ */
-
-/* ------------------ media querries for login ------------------ */
-@media(max-width: 1400px) {
-    
-}
-
-@media(max-width: 1000px) {
-    section {
-        /* display: none; */
-    }
-
-    .login-admin-user a {
-        margin: 0 40px;
-    }
-}
-
-@media(max-width: 580px) {
-    section {
-        /* display: none; */
-    }
-
-    .login-admin-user a {
-        margin: 0 30px;
-    }
-}
-
-@media(max-width: 270px) {
-    section {
-        /* display: none; */
-    }
-}
-/* ------------------ end of media querries for login ------------------ */
-
-/* ------------------ media querries for signup ------------------ */
-@media(max-width: 1400px) {
-    
-}
-
-@media(max-width: 1000px) {
-    .wrapper {
-        background: #f4f4f4;
-    }
-
-    section {
-        /* display: none; */
-        margin: auto;
-    }
-
-    .signup-content {
-        margin: auto;
-    }
-
-    .signup-text {
-        width: 100%;
-        margin: 10px;
-        font-size: 20px;
-    }
-}
-
-@media(max-width: 850px) {
-    section {
-        /* display: none; */
-    }
-
-    @media(max-width: 580px) {
-        section {
-            /* display: none; */
-        }
-
-        .signup-holder {
-            justify-content: center;
-        }
-
-        .signup-form {
-            min-width: 300px;
-        }
-
-        .signup-form label {
-            margin: 8px 30px;
-            color: #78472C;
-            font-size: 20px;
-        }
-        
-        .signup-form input {
-            margin: 8px 30px;
-            font-size: 16px;
-        }
-        
-        .signup-form #btn {
-            font-size: 20px;
-            margin: 20px 30px;
-        }
-    }
-}
-/* ------------------ end of media querries for signup ------------------ */
 
 /* ------------------ media querries for admin ------------------ */
 @media(max-width: 1400px) {

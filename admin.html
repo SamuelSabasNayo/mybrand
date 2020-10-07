@@ -42,39 +42,39 @@
                     </div>
                     <div class="admin-holder">
                             <div class="admin-box">
-                                <p>All Users</p>
+                                <p class="orangered">All Users</p>
                                 <img src="assets/images/Users.svg" alt="Users">
-                                <p>160</p>
+                                <p id="all-users" class="orangered"></p>
                             </div>
                             <div class="admin-box">
-                                <p class="orangered">Active Users</p>
+                                <p>Active Users</p>
                                 <img src="assets/images/Users.svg" alt="Users">
-                                <p class="orangered">90</p>
+                                <p></p>
                             </div>
                             <div class="admin-box">
                                 <p>Galleries</p>
                                 <img src="assets/images/gallery.svg" alt="Users">
-                                <p>4</p>
+                                <p></p>
                             </div>
                             <div class="admin-box">
-                                <p>All Blog Posts</p>
+                                <p class="orangered">All Blog Posts</p>
                                 <img src="assets/images/Blogs.svg" alt="Blogs">
-                                <p>900</p>
+                                <p id="all-blogs" class="orangered"></p>
                             </div>
                             <div class="admin-box">
-                                <p class="orangered">New Blog Posts</p>
+                                <p>New Blog Posts</p>
                                 <img src="assets/images/Blogs.svg" alt="Blogs">
-                                <p class="orangered">65</p>
+                                <p></p>
                             </div>
                             <div class="admin-box">
-                                <p class="orangered">New Comments</p>
+                                <p class="orangered">All Comments</p>
                                 <img src="assets/images/Comments.svg" alt="Blogs">
-                                <p class="orangered">300</p>
+                                <p id="all-queries" class="orangered"></p>
                             </div>
                     </div>
                 </div>
                 <div class="login-signup-message">
-                    <p> <span><a href="login.html">Logout</a></span> </p>
+                    <p> <span><a  id="logout" href="#" onclick="event.preventDefault(); logOut()">Logout</a></span> </p>
                 </div>
         </section>
         <footer>
@@ -107,5 +107,14 @@
             </div>
         </footer>
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    
+    <script src="js/init-firebase.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

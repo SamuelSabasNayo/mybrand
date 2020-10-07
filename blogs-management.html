@@ -24,48 +24,59 @@
         </div>
         <script src="js/script.js"></script>
     </header>
-        <section>
-            <div class="content-title">
-                <h2><span class="orangered">Manage</span> <span class="dark-orange">Blogs</span></h2>
+    <section>
+        <div class="content-title">
+            <h2><span class="orangered">Manage</span> <span class="dark-orange">Blogs</span></h2>
+        </div>
+        <div class="blogs-content">
+            <div class="contact-text">
+                <p>You can Read, Edit and Delete <span class="orangered">Blog Posts</span></p>
             </div>
-            <div class="blogs-content">
-                <div class="blogs-holder">
-                    <input class="blog-create" type="submit" value="+ Create A Blog">
-                    <input class="blog-create" type="submit" value="+ Edit A Blog">    
-                </div><div class="login-signup-message">
-                    <p><span><a href="login.html">Logout</a></span></p>
+            <div class="blogs-holder">
+                <div id="my-blogs"></div>
+            </div>
+            <div class="login-signup-message">
+                <p><span><a id="logout" href="#" onclick="event.preventDefault(); logOut()">Logout</a></span></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-row1">
+            <div class="about-us">
+                <p class="footer-orangered">About Us</p>
+                <p>Mockup Design</p>
+                <p>Frontend & Backend Services</p>
+                <p>Database Management</p>
+            </div>
+            <div class="follow-us">
+                <p class="footer-orangered">Follow Us</p>
+                <div class="social-media">
+                    <div><a target="_blank" href="https://www.linkedin.com/in/nshumbushijwenayo-samuel-726170112/"><img class="media" src="assets/images/Linkedin.svg" alt="linkedin"></a></div>
+                    <div><a target="_blank" href="https://github.com/SamuelSabasNayo/"><img class="media" src="assets/images/Github.svg" alt="github"></a></div>
+                    <div><a target="_blank" href="https://twitter.com/samuel_nayo"><img class="media" src="assets/images/Twitter.svg" alt="twitter"></a></div>
+                    <div><a target="_blank" href="https://web.facebook.com/samuelsabas.nshumbushijwenayo.3/"><img class="media" src="assets/images/Facebook.svg" alt="facebook"></a></div>
                 </div>
             </div>
-        </section>
-        <footer>
-            <div class="footer-row1">
-                <div class="about-us">
-                    <p class="footer-orangered">About Us</p>
-                    <p>Mockup Design</p>
-                    <p>Frontend & Backend Services</p>
-                    <p>Database Management</p>
-                </div>
-                <div class="follow-us">
-                    <p class="footer-orangered">Follow Us</p>
-                    <div class="social-media">
-                        <div><a target="_blank" href="https://www.linkedin.com/in/nshumbushijwenayo-samuel-726170112/"><img class="media" src="assets/images/Linkedin.svg" alt="linkedin"></a></div>
-                        <div><a target="_blank" href="https://github.com/SamuelSabasNayo/"><img class="media" src="assets/images/Github.svg" alt="github"></a></div>
-                        <div><a target="_blank" href="https://twitter.com/samuel_nayo"><img class="media" src="assets/images/Twitter.svg" alt="twitter"></a></div>
-                        <div><a target="_blank" href="https://web.facebook.com/samuelsabas.nshumbushijwenayo.3/"><img class="media" src="assets/images/Facebook.svg" alt="facebook"></a></div>
-                    </div>
-                </div>
-                <div class="contact-us">
-                    <p class="footer-orangered">Contact Us</p>
-                    <p>Email: nshusamuel1@gmail.com</p>
-                    <p>Phone: (+250) 787814449</p>
-                    <p>Kigali, Rwanda</p>
-                    <p>KG 03 RD, Kigali</p>
-                </div>
+            <div class="contact-us">
+                <p class="footer-orangered">Contact Us</p>
+                <p>Email: nshusamuel1@gmail.com</p>
+                <p>Phone: (+250) 787814449</p>
+                <p>Kigali, Rwanda</p>
+                <p>KG 03 RD, Kigali</p>
             </div>
-            <div class="copy-right">
-                <p>&copy; 2020 | Sam Web Design | All Right Reserved.</p>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="copy-right">
+            <p>&copy; 2020 | Sam Web Design | All Right Reserved.</p>
+        </div>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    
+    <script src="js/init-firebase.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

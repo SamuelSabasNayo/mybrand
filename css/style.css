@@ -88,6 +88,11 @@ header {
         width: 50%;
     }
 }
+@media(min-width: 801px) {
+    .nav-menu {
+        display: block;
+    }
+}
 @media(max-width: 800px) {
     header {
         /* display: none; */
@@ -354,7 +359,7 @@ section {
     }
 
     .technologies {
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -458,6 +463,10 @@ section {
     background: #fff;
 }
 
+.contact-form form {
+    height: fit-content;
+    margin: 20px 0;
+}
 
 .contact-form label {
     margin: 0px 50px;
@@ -475,14 +484,15 @@ section {
     border-radius: 8px;
 }
 
-.contact-form #btn {
+.contact-form #submit-btn {
     width: 81%;
     font-size: 20px;
     color: #e8491d;
     background: #a7b5be;
     border: 3px solid #a7b5be;
     border-radius: 8px;
-    margin: 20px 50px;
+    margin: 20px 0 0 50px;
+    padding: 8px 0;
 }
 
 .login-signup-message {
@@ -627,6 +637,7 @@ section {
 .blogs-holder {
     margin: auto;
     width: 80%;
+    min-height: 80vh;
     height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -643,6 +654,7 @@ section {
     width: 360px;
     height: 220px;
     background: #f4f4f4;
+    border: 1px solid #a7b5be;
 }
 
 .blog-box:hover {
@@ -661,10 +673,13 @@ section {
 .blog-time {
     font-size: 13px;
     text-align: end;
+    color: #78472C;
 }
 
 .blog-author {
     font-size: 13px;
+    color: #78472C;
+    margin-left: 5px;
 }
 
 .blog-title {
@@ -674,6 +689,7 @@ section {
 
 .blog-text {
     text-align: justify;
+    color: #78472C;
 }
 
 .blog-paragraph {
@@ -1114,3 +1130,58 @@ footer {
     }
 }
 /* ------------------ footer ------------------ */
+
+/* ------------------ error handling ------------------ */
+#error {
+    width: 80%;
+    margin: 0 0 10px 50px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: justify;
+    color: #fff;
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+
+/* ------------------ blogs from database ------------------ */
+#my-blogs {
+    width: 100%;
+    margin: 20px auto;
+    /* background: #a7b5be; */
+}
+
+#my-blogs li {
+    color: #78472C;
+    font-size: 20px;
+    list-style: none;
+}
+
+.options {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #a7b5be;
+    width: 100%;
+    /* background: cornsilk; */
+    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    justify-content: space-around;
+}
+
+@media(max-width: 450px) {
+    .options {
+        display: block;
+    }
+}
+
+.edit-blog, .delete-blog {
+    width: 170px;
+    margin: 4px;
+    padding: 10px;
+    color: #e8491d;
+    font-size: 20px;
+    justify-content: space-between;
+    border: 2px solid #a7b5be;
+    background: #a7b5be;
+}

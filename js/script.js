@@ -1,4 +1,4 @@
-// alert('Hello Sam');
+// ---------------- Hamburger menu --------------------
 const menu = document.querySelector('.nav-menu');
 const navMenuUl = document.querySelector('.navMenuUl');
 const openMenu = document.querySelector('.openMenu');

@@ -666,8 +666,9 @@ section {
     color: #78472C;
 }
 
-.blog-img {
-    width: 97%;
+.blog-image {
+    width: 360px;
+    height: auto;
 }
 
 .blog-time {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Admin Dashboard Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,34 +26,31 @@
     </header>
         <section>
                 <div class="content-title">
-                    <h2><span class="orangered">Admin</span> <span class="dark-orange">Login</span></h2>
+                    <h2><span class="orangered">Admin</span> <span class="dark-orange">Dasboard</span></h2>
+                </div><div class="contact-text">
+                    <p>Manage <span class="orangered">Queries</span></p>
                 </div>
-                <div class="contact-content">
-                    <div class="contact-holder">
-                        <div class="contact-text">
-                            <p>Login To have all <span class="orangered">Privelleges</span></p>
-                        </div>
-                        <div class="contact-form">
-                            
-                            <form id="login-form" onsubmit="event.preventDefault(); login()">
-                                <div id="form-error"></div>
-                                <label for="email">Email:</label>
-                                <input id="login-email" type="text" name="email">
-                                <div id="email-error"></div>
-                                <label for="password">Password</label>
-                                <div type="text" id="error-message" readonly></div>
-                                <input id="login-password" type="password" name="name">
-                                <div id="password-error"></div>
-                                <input id="submit-btn" type="submit" value="Login" data-dismiss="modal" data-toggle="modal" data-target="#blogs-management.html">
-                                <div class="login-admin-user">
-                                    <a href="login.html">Login As User</a>
-                                </div>
-                            </form>
-                        </div>
+                <div class="admin-content">
+                    <div class="admin-menu">
+                        <p>My Brand</p>
+                        <ul>
+                            <li><a href="admin.html">Dashboard</a></li>
+                            <li><a href="#">Manage Users</a></li>
+                            <li><a href="admin2.html">Create Blog</a></li>
+                            <li><a href="blogs-management.html">Read Blogs</a></li>
+                            <li><a href="blogs-management.html">Update Blogs</a></li>
+                            <li><a href="blogs-management.html">Delete Blogs</a></li>
+                            <li class="current-menu"><a href="#">Manage Queries</a></li>
+                        </ul>
                     </div>
-                    <div class="login-signup-message">
-                        <p>Please <span><a href="signup.html">signup</a></span> if you don't have an account</p>
+                    <div class="admin1-holder">
+                        <div id="my-queries"></div>
+                        </div>
+                        
                     </div>
+                </div>
+                <div class="login-signup-message">
+                    <p> <span><a href="login.html">Logout</a></span> </p>
                 </div>
         </section>
         <footer>

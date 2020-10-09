@@ -35,7 +35,7 @@
                         </div>
                         <div class="contact-form">
                             <!-- <form action="blogs-management.html"> -->
-                            <form id="login-form" onsubmit="event.preventDefault(); login()" action="blogs-management.html">
+                            <form id="login-form" onsubmit="event.preventDefault(); login()">
                                 <div id="form-error"></div>
                                 <label for="email">Email:</label>
                                 <input id="login-email" type="text" name="email">
@@ -44,7 +44,7 @@
                                 <div type="text" id="error-message" readonly></div>
                                 <input id="login-password" type="password" name="name">
                                 <div id="password-error"></div>
-                                <input id="submit-btn" type="submit" value="Login" data-dismiss="modal" data-toggle="modal" data-target="#blogs-management.html">
+                                <input id="submit-btn" type="submit" value="Login">
                                 <div class="login-admin-user">
                                     <a href="login-admin.html">Login As Admin</a>
                                 </div>
@@ -92,6 +92,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
     
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
     
     <script src="js/init-firebase.js"></script>
     <script src="js/app.js"></script>

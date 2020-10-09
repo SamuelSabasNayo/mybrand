@@ -14,7 +14,7 @@ async function signUp() {
 
     var regEx = /^([a-z0-9_\-.]+)@([a-z0-9\-.]+)\.([a-z]{2,5})$/;
 
-    // ----------------- validate email -------------------------
+    // ----------------- validate email -----------------------
     if (email == '' || password == '') {
         let error1 = document.createElement('p');
 
@@ -43,14 +43,6 @@ async function signUp() {
         error3.textContent = 'Enter a valid password.';
 
         passwordError.appendChild(error3);
-        console.log('sam1');
-
-        // let arr = ['At least 1 uppercase character.',
-        //     'At least 1 lowercase character.',
-        //     'At least 1 digit.',
-        //     'At least 1 special character.',
-        //     'Minimum 6 characters.'
-        // ];
 
     } else if (password !== confirmPassword) {
         let error4 = document.createElement('p');
@@ -69,6 +61,7 @@ async function signUp() {
                 });
 
                 init();
+                window.location = 'blogs-managemnt.html';
         } catch (error) {
             var errorCode = error.code,
                 errorMessage = error.message;
@@ -87,74 +80,16 @@ async function signUp() {
 
 
 
-// ----------------- send querry ----------------------------------
-// selectors
-const contactForm = document.querySelector('#contact-form');
-const formError = document.querySelector('#form-error');
-// const emailError = document.querySelector('#email-error');
-const querryError = document.querySelector('#querry-error');
-
-async function sendQuerry() {
-    // get user infos
-    const email = contactForm['contact-email'].value;
-    const querry = contactForm['contact-message'].value;
-
-    var regEx = /^([a-z0-9_\-.]+)@([a-z0-9\-.]+)\.([a-z]{2,5})$/;
-
-    // ----------------- validate email -------------------------
-    if (email == '' || querry == '') {
-        let error1 = document.createElement('p');
-
-        error1.setAttribute('id', 'error');
-
-        error1.textContent = 'Enter email and querry.';
-
-        formError.appendChild(error1);
-
-    // ----------------- validate email with regEx ------------------
-    } else if (!regEx.test(email)) {
-        let error2 = document.createElement('p');
-
-        error2.setAttribute('id', 'error');
-
-        error2.textContent = 'Enter a valid email.';
-
-        emailError.appendChild(error2);
-
-    } else {
-        try {
-            db.collection('querries').add({
-                email: email,
-                querry: querry
-            }).then((querry) => {
-                console.log(querry);
-                console.log('Hello Sam');
-            });
-            email = '',
-            querry = ''
-        } catch (error) {
-            var errorCode = error.code,
-                errorMessage = error.message;
-
-            console.log(errorMessage);
-        }
-    }
-};
-
-
-
 // ---------------- login ------------------------------
 // selectors
 const loginForm = document.getElementById('login-form');
 const loginError = document.querySelector('#form-error');
-// const emailError = document.querySelector('#email-error');
-// const passwordError = document.querySelector('#password-error');
-
 
 async function login() {
     // get user infos
     const email = loginForm['login-email'].value;
     const password = loginForm['login-password'].value;
+
 
     var regEx = /^([a-z0-9_\-.]+)@([a-z0-9\-.]+)\.([a-z]{2,5})$/;
 
@@ -205,6 +140,61 @@ async function login() {
 
 
 
+// ----------------- send querry ----------------------------------
+// selectors
+const contactForm = document.querySelector('#contact-form');
+const formError = document.querySelector('#form-error');
+const querryError = document.querySelector('#querry-error');
+
+async function sendQuerry() {
+    // get user infos
+    const email = contactForm['contact-email'].value;
+    const querry = contactForm['contact-message'].value;
+
+    var regEx = /^([a-z0-9_\-.]+)@([a-z0-9\-.]+)\.([a-z]{2,5})$/;
+
+    // ----------------- validate email -------------------------
+    if (email == '' || querry == '') {
+        let error1 = document.createElement('p');
+
+        error1.setAttribute('id', 'error');
+
+        error1.textContent = 'Enter email and querry.';
+
+        formError.appendChild(error1);
+
+    // ----------------- validate email with regEx ------------------
+    } else if (!regEx.test(email)) {
+        let error2 = document.createElement('p');
+
+        error2.setAttribute('id', 'error');
+
+        error2.textContent = 'Enter a valid email.';
+
+        emailError.appendChild(error2);
+
+    } else {
+        try {
+            db.collection('querries').add({
+                email: email,
+                querry: querry
+            }).then((querry) => {
+                console.log(querry);
+                console.log('A query is sent');
+            });
+            email = '',
+            querry = ''
+        } catch (error) {
+            var errorCode = error.code,
+                errorMessage = error.message;
+
+            console.log(errorMessage);
+        }
+    }
+};
+
+
+
 // ---------------- signOut ------------------------------
 // selectors
 const logout = document.getElementById('logout');
@@ -214,9 +204,10 @@ async function logOut() {
         auth.signOut()
             .then(() => {
                 console.log('User signed out');
+                window.location.href = 'blogs.html';
             });
 
-            init();
+            // init();
     } catch (error) {
         console.log(error);
     }
@@ -224,38 +215,90 @@ async function logOut() {
 
 
 
-// -------------------- add a blog by form -------------------------
-// selectors
-const form = document.querySelector('#add-blog');
+//------------- storing images ----------------------------------
+// const uploadedFile = document.querySelector('#uploaded-file');
+// let blogImage = [];
+// ------------- variables -------------
+// let imgName, imgUrl;
+// let files = [];
+// let reader;
 
-async function addBlog() {
-    await db.collection('blogs').add({
-        title: form.title.value,
-        author: form.author.value,
-        content: form.content.value,
-        file: form.file.value,
-        time: form.time.value
-    }).then((blog) => {
-        console.log(blog);
-    });
-    form.title.value = '',
-    form.author.value = '',
-    form.content.value = '',
-    form.file.value = ''
-    form.time.value = ''
+// // ------------- selection process ------------
+// document.getElementById('uploadImage').onclick = function(e) {
+
+//     let input = document.createElement('input');
+//     input.type = 'file';
+
+//     input.onchange = e => {
+//         files = e.target.files;
+//         reader = new FileReader();
+//         reader.onload = function() {
+//             document.getElementById('myimg').src = reader.result;
+//         }
+//         reader.readAsDataURL(files[0]);
+//     }
+//     input.click();
+// };
+
+
+
+// function uploadImage(e) {
+//     if (e.target.files[0] != null) {
+//         blogImage = e.target.files[0];
+//         console.log(blogImage);
+//     } else {
+//         console.log('Image not captured.')
+//     }
+// }
+
+function upload(blog) {
+    // uploadedFile.onchange = (event) => {
+    //     let images = {};
+    //     images = event.target.files[0];
+    //     firebase.storage().ref(`blogs/image/${blog}`).put(images).then((images) => {
+    //         db.collection('images').doc(blog).set({
+    //             file: images
+    //         });
+    //     }).catch ((error) => {
+    //         console.log(error);
+    //     });
+    // }
 };
 
 
 
-// ----------------- render blogs ---------------------------
+// async function addBlog() {
+//     await db.collection('blogs').add({
+//         title: form.title.value,
+//         author: form.author.value,
+//         content: form.content.value,
+//         time: form.time.value,
+//         id = blogRandomId()
+
+//     }).then((blog) => {
+//         console.log(blog);
+//     });
+//     form.title.value = '',
+//     form.author.value = '',
+//     form.content.value = '',
+//     // form.file.value = ''
+//     form.time.value = ''
+// };
+
+function blogRandomId() {
+    return Math.floor(Math.random() * 10000000000) + 1;
+};
+
+// ----------- render blogs ---------------
 const myBlogs = document.getElementById('my-blogs');
 
 const renderBlogs = (doc) => {
     let blog = document.createElement('div');
     let blogBox = document.createElement('div');
+    let title = document.createElement('h2');
+    let image = document.createElement('img');
     let time = document.createElement('span');
     let author = document.createElement('span');
-    let title = document.createElement('h2');
     let content = document.createElement('p');
     // let file = document.createElement('div');
     let p = document.createElement('p');
@@ -265,9 +308,10 @@ const renderBlogs = (doc) => {
     
     blog.setAttribute('class', 'blog');
     blogBox.setAttribute('class', 'blog-box');
+    title.setAttribute('class', 'blog-title');
+    image.setAttribute('class', 'blog-image');
     time.setAttribute('class', 'blog-time');
     author.setAttribute('class', 'blog-author');
-    title.setAttribute('class', 'blog-title');
     content.setAttribute('class', 'blog-text');
     // p.setAttribute('class', 'p');
     options.setAttribute('class', 'options');
@@ -277,6 +321,7 @@ const renderBlogs = (doc) => {
 
     blogBox.textContent = 'Image';
     time.textContent = doc.data().time;
+    image.textContent = doc.data().image;
     author.textContent = `by ${doc.data().author}`;
     title.textContent = doc.data().title;
     content.textContent = doc.data().content;
@@ -285,10 +330,11 @@ const renderBlogs = (doc) => {
     deleteBlog.textContent = 'Delete A Blog';
     
     blog.appendChild(blogBox);
+    blog.appendChild(title);
+    blog.appendChild(image);
     p.appendChild(time);
     p.appendChild(author);
     blog.appendChild(p);
-    blog.appendChild(title);
     blog.appendChild(content);
     // blog.appendChild(file);
     options.appendChild(editBlog);
@@ -313,12 +359,75 @@ const renderBlogs = (doc) => {
     })
 };
 
+
 db.collection('blogs').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
-        renderBlogs(doc);
+        // renderBlogs(doc);
+        fetchImage();
     })
 });
 
+
+
+
+// ----------- render users ---------------
+const myUsers = document.getElementById('my-users');
+
+const renderUsers = (doc) => {
+    let myUser = document.createElement('div');
+    let userName = document.createElement('p');
+    let userEmail = document.createElement('p');
+
+    myUser.setAttribute('class', 'admin-users');
+    userName.setAttribute('class', 'blog-text');
+    userEmail.setAttribute('class', 'blog-text');
+
+    userName.textContent = `Name: ${doc.data().name}`;
+    userEmail.textContent = `Email: ${doc.data().email}`;
+    
+    myUser.appendChild(userName);
+    myUser.appendChild(userEmail);
+
+    myUsers.appendChild(myUser);
+};
+
+
+db.collection('users').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        renderUsers(doc);
+    })
+});
+
+
+
+
+// ----------- render Queries ---------------
+const myQueries = document.getElementById('my-queries');
+
+const renderQueries = (doc) => {
+    let myQuery = document.createElement('div');
+    let userEmail = document.createElement('p');
+    let userQuery = document.createElement('p');
+
+    myQuery.setAttribute('class', 'admin-users');
+    userEmail.setAttribute('class', 'blog-text');
+    userQuery.setAttribute('class', 'blog-text');
+
+    userEmail.textContent = `Email: ${doc.data().email}`;
+    userQuery.textContent = `Name: ${doc.data().querry}`;
+    
+    myQuery.appendChild(userEmail);
+    myQuery.appendChild(userQuery);
+
+    myQueries.appendChild(myQuery);
+};
+
+
+db.collection('querries').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        renderQueries(doc);
+    })
+});
 
 
 // ----------- rendering number of users --------------
@@ -356,7 +465,7 @@ const numberOfBlogs = () => {
 numberOfBlogs();
 
 
-// ------------------ rendering number of querries ------------------------
+// ------------ rendering number of querries -----------------
 const numberOfQueries = () => {
 
     db.collection("querries").get().then(function(querySnapshot) {
@@ -372,24 +481,6 @@ const numberOfQueries = () => {
 
 numberOfQueries();
 
-
-
-//---------------------- storing files ----------------------------------
-const uploadedFile = document.querySelector('#uploaded-file');
-
-function upload(blog) {
-    // uploadedFile.onchange = (event) => {
-    //     let images = {};
-    //     images = event.target.files[0];
-    //     firebase.storage().ref(`blogs/image/${blog}`).put(images).then((images) => {
-    //         db.collection('images').doc(blog).set({
-    //             file: images
-    //         });
-    //     }).catch ((error) => {
-    //         console.log(error);
-    //     });
-    // }
-};
 
 
 
@@ -417,10 +508,6 @@ async function init() {
                 console.log('User logged out');
             // }
             // setupBlogs();
-
-            //  ------------- redirect a user    --------------
-            window.location.href = 'blogs.html';
-            // console.log('hello sam');
         }
     });
 
@@ -460,3 +547,91 @@ async function init() {
 // console.log(loginSubmitBtn.dataset.target);
 // loginSubmitBtn.dataset.target = '#blogs-management.html';
 // console.log(loginSubmitBtn.dataset.target);
+
+// selectors
+const form = document.querySelector('#add-blog');
+
+// ------------- variables -------------
+let files = [];
+let reader;
+
+// ------------- selection process ------------
+document.getElementById('upload-image').onclick = function(e) {
+
+    let input = document.createElement('input');
+    input.type = 'file';
+
+    input.onchange = e => {
+        files = e.target.files;
+        reader = new FileReader();
+        reader.onload = function() {
+            document.getElementById('myimg').src = reader.result;
+        }
+        reader.readAsDataURL(files[0]);
+    }
+    input.click();
+};
+
+// ------------- upload process ------------
+document.getElementById('submit-image').onclick = function() {
+    ImgName = blogRandomId();
+    let title = form.title.value,
+        author = form.author.value,
+        content = form.content.value,
+        time = form.time.value;
+    let uploadTask = firebase.storage().ref('images/'+ImgName+'.png').put(files[0]);
+
+    uploadTask.on('state_changed', function() {
+        // console.log('my-image stored');
+        db.collection('blogs').doc(`${ImgName}`).set({
+            title: title,
+            imageUrl: 'images/'+ImgName+'.png',
+            author: author,
+            content: content,
+            time: time
+        }).then(() => {
+            console.log('Blog created');
+        })
+    },
+
+    function fetchImage() {
+        db.collection('blogs').get().then((querySnapshot) => {
+            querySnapshot.forEach((blog) => {
+                storage.ref(blog.data().imageUrl).getDownloadURL().then((url) => {
+                    blogs.push({
+                        title: blog.data().title,
+                        imageUrl: blog.data().imageUrl,
+                        author: blog.data().author,
+                        content: blog.data().content,
+                        time: blog.data().time
+                    });
+                    console.log('Blog downloaded.');
+                }).catch((error) => {
+                    console.log(`Downloading error: ${error}`);
+                });
+            });
+        }).catch((error) => {
+            console.log(`Rendering error: ${error}`);
+        });
+    }
+    // ------------- error handling ------------
+    // function(error) {
+    //     console.log('error in saving the image');
+    // }
+
+    // ------------- submit image link to firestore ------------
+        // storage.ref(blog.data).getDownloadURl().then(function(url) {
+            // ImgUrl = url;
+            // return url;
+            // console.log(url);
+            // db.collecton('images/'+ImgUrl).set({
+                // Name: ImgName,
+                // Link: ImgUrl
+            // });
+            
+        // })
+        // }
+    );
+};
+
+console.log('sam1');

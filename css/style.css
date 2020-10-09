@@ -947,7 +947,7 @@ th, tr, td {
 }
 
 .admin2-holder  textarea {
-    width: 99%;
+    width: 100%;
     border: 2px solid #a7b5be;
     color: #78472C;
 }
@@ -1184,4 +1184,11 @@ footer {
     justify-content: space-between;
     border: 2px solid #a7b5be;
     background: #a7b5be;
+}
+
+.admin-users {
+    margin: 15px 0;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
 }

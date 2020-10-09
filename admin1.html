@@ -27,6 +27,8 @@
         <section>
                 <div class="content-title">
                     <h2><span class="orangered">Admin</span> <span class="dark-orange">Dasboard</span></h2>
+                </div><div class="contact-text">
+                    <p>Manage <span class="orangered">Users</span></p>
                 </div>
                 <div class="admin-content">
                     <div class="admin-menu">
@@ -38,29 +40,13 @@
                             <li><a href="blogs-management.html">Read Blogs</a></li>
                             <li><a href="blogs-management.html">Update Blogs</a></li>
                             <li><a href="blogs-management.html">Delete Blogs</a></li>
+                            <li><a href="admin3.html">Manage Queries</a></li>
                         </ul>
                     </div>
                     <div class="admin1-holder">
-                        <table>
-                            <tr>
-                                <th class="td-no"></th> <th>NAME</th> <th class="td-email">EMAIL</th> <th colspan="2">OPTIONS</th>
-                            </tr>
-                            <tr>
-                                <td class="td-no">1</td> <td>Travesy Media</td> <td class="td-email">travesy@gmail.com</td> <td>Accept</td> <td>Delete</td>
-                            </tr> 
-                            <tr>
-                                <td class="td-no">2</td> <td>James Smith</td> <td class="td-email">smith@james.com</td> <td>Accept</td> <td>Delete</td>
-                            </tr> 
-                            <tr>
-                                <td class="td-no">3</td> <td>John Peter</td> <td class="td-email">john@gmail.com</td> <td>Accept</td> <td>Delete</td>
-                            </tr> 
-                            <tr>
-                                <td class="td-no">4</td> <td>Travesy Media</td> <td class="td-email">travesy@gmail.com</td> <td>Accept</td> <td>Delete</td>
-                            </tr> 
-                            <tr>
-                                <td class="td-no">2</td> <td>James Smith</td> <td class="td-email">smith@james.com</td> <td>Accept</td> <td>Delete</td>
-                            </tr> 
-                        </table>
+                        <div id="my-users"></div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="login-signup-message">
@@ -103,6 +89,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
     
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
     
     <script src="js/init-firebase.js"></script>
     <script src="js/app.js"></script>

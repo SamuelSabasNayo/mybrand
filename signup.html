@@ -20,6 +20,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blogs.html">Blogs</a></li>         
+                <li class="current"><a href="login.html">Signup</a></li>         
             </ul>
         </div>
         <script src="js/script.js"></script>
@@ -39,11 +40,13 @@
                                 <div id="form-error"></div>
                                 <label for="username">Username:</label>
                                 <input id="signup-username" type="text" name="username">
+                                <div id="username-error"></div>
                                 <label for="email">Email:</label><br>
                                 <input id="signup-email" type="text" name="email">
                                 <div id="email-error"></div>
                                 <label for="password">Password:</label>
-                                <input id="signup-password" type="password" name="name">
+                                <input oninput="passwordHint()" id="signup-password" type="password" name="name">
+                                <p id="signup-hint"></p>
                                 <div id="password-error"></div>
                                 <label for="confirm-password">Confirm Password:</label>
                                 <input id="confirm-password" type="password" name="confirm-password">
@@ -97,6 +100,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
     
     <script src="js/init-firebase.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 </html>

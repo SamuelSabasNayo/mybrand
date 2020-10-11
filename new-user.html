@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs Page</title>
+    <title>New-User Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,28 +16,29 @@
             <div class="openMenu"><img src="assets/images/Menu.svg" alt="menu" width="55"></div>
             <div class="closeMenu"><img src="assets/images/Close.svg" alt="close" width="55"></div>
             <ul class="navMenuUl">
-                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="current"><a href="blogs.html">Blogs</a></li>         
-                <li><a href="login.html">Logout</a></li>         
+                <li><a href="blogs.html">Blogs</a></li>         
+                <li><a href="login.html">Login</a></li>        
             </ul>
         </div>
         <script src="js/script.js"></script>
     </header>
     <section>
-        <div class="content-title">
-            <h2><span class="orangered">Manage</span> <span class="dark-orange">Blogs</span></h2>
-        </div>
-        <div class="blogs-content">
-            <div class="contact-text">
-                <p>You can Read, Edit and Delete <span class="orangered">Blog Posts</span></p>
+        
+        <div class="index-content">
+            <div class="content-title">
+                <h2><span class="dark-orange">You are</span> <span class="orangered">Welcome!</span></h2>
             </div>
-            <div class="blogs-holder">
-                <div id="my-blogs"></div>
-            </div>
-            <div class="login-signup-message">
-                <p><span><a id="logout" href="#" onclick="event.preventDefault(); logOut()">Logout</a></span></p>
+            <div id="new-user">
+                <h2><span class="dark-orange">You can create your own blog post andbring your ideas to life by writing and managing your blog posts anytime.</span></h2>
+                <form action="admin2.html">
+                    <input id="create-btn" type="submit" value=" + Create A Blog">
+                </form>
+                <form action="#">
+                    <input id="profile-infos" type="submit" value=" + Update Your Profile Information">
+                </form>
             </div>
         </div>
     </section>
@@ -81,6 +82,5 @@
     
     <script src="js/init-firebase.js"></script>
     <!-- <script src="js/app.js"></script> -->
-    <script src="js/render-blogs.js"></script>
 </body>
 </html>

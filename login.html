@@ -20,6 +20,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blogs.html">Blogs</a></li>         
+                <li class="current"><a href="login.html">Login</a></li>         
             </ul>
         </div>
         <script src="js/script.js"></script>
@@ -34,7 +35,6 @@
                             <p>Login To Build Your <span class="orangered">Blog Posts</span></p>
                         </div>
                         <div class="contact-form">
-                            <!-- <form action="blogs-management.html"> -->
                             <form id="login-form" onsubmit="event.preventDefault(); login()">
                                 <div id="form-error"></div>
                                 <label for="email">Email:</label>
@@ -45,9 +45,6 @@
                                 <input id="login-password" type="password" name="name">
                                 <div id="password-error"></div>
                                 <input id="submit-btn" type="submit" value="Login">
-                                <div class="login-admin-user">
-                                    <a href="login-admin.html">Login As Admin</a>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -96,6 +93,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
     
     <script src="js/init-firebase.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

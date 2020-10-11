@@ -88,6 +88,9 @@ async function signUp() {
             }
             else {
                 console.log(errorMessage);
+                signupError.innerHTML = '<p>Email in use with another account.</p>';
+                signupError.style.display = 'block';
+                // window.location.href = 'login.html';
             }
         }
     }

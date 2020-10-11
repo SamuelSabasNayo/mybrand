@@ -33,6 +33,7 @@ const renderBlogs = async (doc) => {
     // p.setAttribute('class', 'p');
     options.setAttribute('class', 'options');
     editBlog.setAttribute('class', 'edit-blog');
+    editBlog.setAttribute('data-id', doc.id);
     deleteBlog.setAttribute('class', 'delete-blog');
     deleteBlog.setAttribute('data-id', doc.id);
 
@@ -59,7 +60,15 @@ const renderBlogs = async (doc) => {
 
     myBlogs.appendChild(blog);
 
-    
+
+    // ----------------- editing blogs ---------------------------
+    editBlog.addEventListener('click', (e) => {
+        localStorage.setItem('dataId',e.target.getAttribute('data-id'));
+
+        window.location.href = 'edit-blog.html';
+    });
+
+
     // ----------------- deleting blogs ---------------------------
 
     deleteBlog.addEventListener('click', (e) => {
@@ -76,6 +85,7 @@ const renderBlogs = async (doc) => {
 };
 
 
+
 function renderBlog() {
     db.collection('blogs').onSnapshot((blogs) => {
         blogs.forEach((blog) => {
@@ -84,8 +94,6 @@ function renderBlog() {
         })
     })
 };
-
-
 
 
 

@@ -73,33 +73,7 @@ function upload(blog) {
 
 
 
-// ----------- render users ---------------
-const myUsers = document.getElementById('my-users');
 
-const renderUsers = (doc) => {
-    let myUser = document.createElement('div');
-    let userName = document.createElement('p');
-    let userEmail = document.createElement('p');
-
-    myUser.setAttribute('class', 'admin-users');
-    userName.setAttribute('class', 'blog-text');
-    userEmail.setAttribute('class', 'blog-text');
-
-    userName.textContent = `Name: ${doc.data().name}`;
-    userEmail.textContent = `Email: ${doc.data().email}`;
-    
-    myUser.appendChild(userName);
-    myUser.appendChild(userEmail);
-
-    myUsers.appendChild(myUser);
-};
-
-
-db.collection('users').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        renderUsers(doc);
-    })
-});
 
 
 

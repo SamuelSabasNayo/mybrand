@@ -20,6 +20,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blogs.html">Blogs</a></li>         
+                <li class="current"><a href="login.html">Login</a></li>         
             </ul>
         </div>
         <script src="js/script.js"></script>
@@ -45,16 +46,9 @@
                     <div class="admin2-holder" >
                         <form action="" id="add-blog" onsubmit="event.preventDefault()">
                             <input type="text" name="title" placeholder="Title">
-                            <input type="text" name="author" placeholder="Author">
-                            <textarea name="content" rows="20" placeholder="Content"></textarea>
-                            <!-- <label for="myimg" id="upProgress">Upload Image</label> -->
+                            <!-- <input type="text" name="author" placeholder="Author"> -->
+                            <textarea id="admin-textarea" name="content" rows="10" placeholder="Content"></textarea>
                             <input id="upload-image" type="file" name="file">
-                            <!-- <div id="img-buttons">
-                                <button id="select">Select Image</button>
-                                <button id="upload">Upload Image</button>
-                                <button id="retrieve">Retrieve Image</button>
-                            </div> -->
-                            <input type="datetime-local" name="time" placeholder="Time">
                             <input onclick="addBlog()" id="submit-image" type="submit" value="Create A Blog">
                         </form>
                     </div>
@@ -103,7 +97,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
     
     <script src="js/init-firebase.js"></script>
-    <script src="js/app.js"></script>
-    <!-- <script src="js/blogs.js"></script> -->
+    <script src="js/create-blogs.js"></script>
 </body>
 </html>

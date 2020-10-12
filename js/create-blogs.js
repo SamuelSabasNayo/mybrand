@@ -32,7 +32,7 @@ async function init() {
             .then((userSnapshot) => {
                 userSnapshot.forEach((doc) => {
                     const currentUserName = doc.data().username;
-                    const currentUserEmail = doc.data().email;
+                const currentUserEmail = doc.data().email;
                     if (currentUserEmail === user.email) {
                         console.log(`User logged in as: ${currentUserName} with ${user.email}`);
 

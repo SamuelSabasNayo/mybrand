@@ -1186,6 +1186,8 @@ footer {
 #new-user {
     width: 80%;
     margin: 50px auto;
+    align-items: center;
+    text-align: center;
 }
 
 #create-btn, #profile-infos {
@@ -1226,7 +1228,7 @@ footer {
     display: flex;
     /* display: grid;
     grid-template-columns: repeat(2, 1fr); */
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 @media(max-width: 450px) {
@@ -1236,8 +1238,8 @@ footer {
 }
 
 .edit-blog, .delete-blog {
-    width: 170px;
-    margin: 4px;
+    /* width: 170px; */
+    margin-right: 10px;
     padding: 10px;
     color: #e8491d;
     font-size: 20px;
@@ -1251,4 +1253,14 @@ footer {
     padding: 10px;
     width: 100%;
     background: #fff;
+}
+
+#select, #upload, #retrieve {
+    margin: 4px;
+    padding: 10px;
+    color: #e8491d;
+    font-size: 20px;
+    justify-content: space-between;
+    border: 2px solid #a7b5be;
+    background: #a7b5be;
 }

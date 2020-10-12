@@ -20,7 +20,7 @@ const renderBlogs = async (doc) => {
     let p = document.createElement('p');
     
     blog.setAttribute('class', 'blog');
-    a.setAttribute('href', '#');
+    a.setAttribute('href', 'blog1.html');
     // a.setAttribute('href', 'blog1.html');
     blogBox.setAttribute('class', 'blog-box');
     title.setAttribute('class', 'blog-title');

@@ -7,6 +7,7 @@ async function logOut() {
         auth.signOut()
             .then(() => {
                 console.log('User signed out');
+                alert('User signed out.');
                 window.location.href = 'blogs.html';
             });
 

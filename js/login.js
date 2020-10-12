@@ -50,6 +50,7 @@ async function login() {
             auth.signInWithEmailAndPassword(email, password)
                 .then(user => {
                     console.log(user);
+                    alert('User logged in.');
                     if (user) {
                         window.location = 'blogs-management.html';
                     }

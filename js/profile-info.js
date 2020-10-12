@@ -52,6 +52,7 @@ async function init() {
                                     time: time
                                 }).then(() => {
                                     console.log('Profile created');
+                                    alert('Profile picture uploaded.');
 
                                     // window.location.href = 'new-blog.html';
                                 }).catch((error) => {

@@ -1213,6 +1213,10 @@ footer {
     list-style: none;
 }
 
+#logout {
+    cursor: pointer;
+}
+
 .options {
     margin-top: 20px;
     padding-bottom: 20px;

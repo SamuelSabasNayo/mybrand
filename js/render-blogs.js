@@ -78,6 +78,7 @@ const renderBlogs = async (doc) => {
     
         db.collection('blogs').doc(dataId).delete().then(function() {
             console.log("Document successfully deleted!");
+
         }).catch(function(error) {
             console.error("Error removing document: ", error);
         });

@@ -58,5 +58,3 @@ document.getElementById('submit-image').onclick = () => {
     },
     );
 };
-
-

@@ -1,4 +1,4 @@
-
+console.log('create-static-blogs.js');
 // selectors
 const form = document.querySelector('#add-blog');
 
@@ -42,21 +42,19 @@ async function init() {
                             let currentTime = new Date();
                             let time = `${currentTime.getFullYear()}-${currentTime.getMonth()}-${currentTime.getDate()}`;
                             let title = form.title.value,
-                                author = currentUserName,
+                                author = 'Samuel Nayo',
                                 content = form.content.value;
-                            let uploadTask = firebase.storage().ref('images/'+ImgName+'.png').put(files[0]);
+                            let uploadTask = firebase.storage().ref('static-blogs/images/'+ImgName+'.png').put(files[0]);
                         
                             uploadTask.on('state_changed', function() {
-                                db.collection('blogs').doc(`${ImgName}`).set({
+                                db.collection('static-blogs').doc(`${ImgName}`).set({
                                     title: title,
-                                    imageUrl: 'images/'+ImgName+'.png',
+                                    imageUrl: 'static-blogs/images/'+ImgName+'.png',
                                     author: author,
                                     content: content,
                                     time: time
                                 }).then(() => {
-                                    console.log('Blog created');
-
-                                    window.location.href = 'new-blog.html';
+                                    console.log('Static Blog created');
                                 })
                             },
                             );

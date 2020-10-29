@@ -52,7 +52,7 @@ async function login() {
                     console.log(user);
                     alert('User logged in.');
                     if (user) {
-                        window.location = 'blogs-management.html';
+                        window.location = 'new-user.html';
                     }
                 });
         } catch (error) {
